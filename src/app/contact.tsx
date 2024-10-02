@@ -6,7 +6,7 @@ import { IoLocationOutline } from "react-icons/io5";
 
 export default function Contact() {
 
-    const { register, control, handleSubmit, formState: { errors } } = useForm();
+    const { register, control, handleSubmit } = useForm();
 
     const onSubmit = (data: any) => console.log(data);
 
