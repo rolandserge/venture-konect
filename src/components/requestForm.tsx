@@ -5,18 +5,18 @@ import { useForm } from "react-hook-form";
 import { IoLocationOutline } from "react-icons/io5";
 import { LuPhone } from "react-icons/lu";
 
-interface FormDataProps {
-    lastName: string,
-    firstName: string,
-    email: string,
-    phone: number,
-    interest: string,
-    confirm: boolean,
-}
+// interface FormDataProps {
+//     lastName: string,
+//     firstName: string,
+//     email: string,
+//     phone: number,
+//     interest: string,
+//     confirm: boolean,
+// }
 
 export default function RequestForm() {
 
-    const { register, control, handleSubmit, formState: { errors } } = useForm();
+    const { register, control, handleSubmit } = useForm();
 
     const onSubmit = (data: any) => console.log(data);
 

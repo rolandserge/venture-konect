@@ -1,4 +1,3 @@
-import React from 'react'
 import BannerModel from '../../components/bannerModel'
 
 export default function Photo() {

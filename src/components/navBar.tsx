@@ -61,8 +61,8 @@ export default function NavBar() {
                         <li>
                             <span>Services</span>
                             <ul className="submenu">
-                                <li><Link to="/services/consultancy-service" className="lien">Consultancy service</Link></li>
                                 <li><Link to="/services/venture-konect's-events" className="lien">Venture Konect's Events</Link></li>
+                                <li><Link to="/services/consultancy-service" className="lien">Consultancy service</Link></li>
                                 <li><Link to="/services/corporate-excecute-prospection" className="lien">Corporate Executive Prospection</Link></li>
                             </ul>
                         </li>

@@ -12,7 +12,7 @@ import Heros from '../components/heros'
 
 export default function Home() {
 
-    const [markerLocation, setMarkerLocation] = useState({
+    const [markerLocation] = useState({
         lat: 51.509865,
         lng: -0.118092,
     });
