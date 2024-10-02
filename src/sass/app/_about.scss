@@ -1,0 +1,210 @@
+.about-us-page {
+
+    .about-us-content {
+
+        .card-about {
+            display: flex;
+            align-items: center;
+            gap: 1em;
+            padding: 1em 0 1em 3em;
+
+            .image {
+                width: 50%;
+                height: 55vh;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .infos {
+                width: 50%;
+
+                span {
+                    color: $blue-foncer;
+                    font-weight: 600;
+                    font-size: 1.5em;
+                }
+                p {
+                    margin-top: 2em;
+                }
+            }
+        }
+        .card-part-1 {
+            display: grid;
+            grid-template-columns: 60% 40%;
+            padding: 0 3em;
+            margin-top: 2em;
+            justify-content: center;
+            // background: $blue-foncer;
+
+            .image {
+                    
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .part {
+                border-radius: 4px;
+                box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+                height: 100%;
+                background: white;
+                padding: 1.5em;
+                
+                span {
+                    font-weight: 600;
+                    width: max-content;
+                    font-size: 1.8em;
+                    display: flex;
+                    flex-direction: column;
+                    color: $blue-bg;
+
+                }
+
+                
+
+                .vision {
+                    margin-top: 1.1em;
+                    color: $gris;
+                }
+
+                .mission-card {
+                    margin-top: 1em;
+
+                    .card {
+                        display: flex;
+                        gap: 1em;
+                        padding: .8em 0;
+
+                        .card-icon {
+                            color: $blue-foncer;
+                        }
+                        p {
+                            color: $gris;
+                        }
+                    }
+                }
+            }
+        }
+
+        .visions-section {
+            margin-top: 5em;
+            padding: .5em 3em;
+
+            span {
+                color: $blue-foncer;
+                font-weight: 600;
+                font-size: 1.8em;
+                text-align: center;
+            }
+            p {
+                padding-top: 2em;
+                width: 80%;
+            }
+        }
+
+        .services {
+            padding: 4em 3em;
+
+            .title-service {
+                color: $blue-foncer;
+                font-weight: 600;
+                font-size: 1.8em;
+                text-align: center;
+                margin-bottom: 2em;
+            }
+        }
+    }
+}
+
+
+// our teams styles
+.teams-page {
+
+    .our-teams {
+        padding: 1em 5em 5em 5em;
+
+        .card-teams {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5em 2em;
+
+            .card {
+                display: flex;
+                gap: 2em;
+
+                .card-image {
+                    width: 30%;
+                    overflow: hidden;
+
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                        transition: all .3s ease-in-out;
+
+                        &:hover {
+                            transform: scale(1.1);
+                            transition: all .3s ease-in-out;
+                        }
+                    }
+                }
+                .info {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1em;
+                    width: 70%;
+
+                    .head {
+                        p {
+                            color: $blue-bg;
+                            font-weight: 600;
+                            font-size: 1.3em;
+                        }
+                        span {
+                            color: $gris;
+                        }
+                    }
+                    p {
+                        width: 92%;
+                    }
+                    .action {
+                        display: flex;
+                        align-items: center;
+                        gap: .5em;
+
+                       
+                        .more {
+                            text-decoration: none;
+                            color: $blue-foncer;
+                            transition: all .3s ease-in-out;
+
+                            // &:hover .rond {
+                            //     background: $blue-foncer;
+                            //     transition: all .3s ease-in-out;
+                            // }
+                        }
+
+                        .rond {
+                            width: 20px;
+                            height: 20px;
+                            background: $jaune;
+                            border-radius: 50%;
+                            transition: all .3s ease-in-out;
+
+                            &:hover {
+                                background: $blue-foncer;
+                                transition: all .3s ease-in-out;
+                            }
+                        }
+
+                    }
+                } 
+            }
+        }
+    }
+}

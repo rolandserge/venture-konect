@@ -1,0 +1,190 @@
+.home-page {
+    background: #f1f1f1;
+
+    .texte {
+        height: 13vh;
+        @include flex-center;
+        background: black;
+
+        p {
+            text-transform: uppercase;
+            font-size: 1.5em;
+            color: white;
+        }
+
+    }
+
+    .site-wapecc {
+        background-image: url("/assets/brochure.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        height: 90vh;
+
+        .overlay {
+            background: rgba($color: #000000, $alpha: .2);
+            height: 100%;
+            width: 100%;
+            @include flex-center;
+
+            .annonce {
+                background: white;
+                width: 60%;
+                display: flex;
+                flex-direction: column;
+                padding: 2em;
+                border-radius: 10px;
+                gap: 1.5em;
+
+                .head {
+                    display: flex;
+                    align-items: center;
+                    gap: 2em;
+
+                    .logo {
+                        width: 40%;
+                        
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    p {
+                        text-transform: uppercase;
+                        font-weight: 600;
+                        font-size: 2.2em;
+                        color: $brown;
+                    }
+                }
+                .action-button {
+                    display: flex;
+                    justify-content: end;
+
+                    .site {
+                        text-decoration: none;
+                        padding: .8em 1.5em;
+                        border-radius: 30px;
+                        background: $jaune;
+                        color: white;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+
+    .business-connection {
+        height: 45vh;
+        background-image: url("/assets/reseau.webp");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .overlay {
+            height: 100%;
+            background: rgba($color: #000000, $alpha: .8);
+            color: white;
+            @include flex-center;
+
+            h2 {
+                width: 65%;
+                font-size: 3em;
+                text-align: center;
+            }
+        }
+    }
+
+    .localisation {
+        display: flex;
+        padding: 5em;
+        gap: 1em;
+
+        .infos {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2em 1em;
+
+            .card {
+                padding: 1.5em;
+                border-radius: 5px;
+                background: $blue-foncer;
+
+                .head {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    p {
+                        color: $jaune;
+                        font-size: 1.3em;
+                        font-weight: 600;
+                    }
+
+                    .flag {
+                        width: 20%;
+                        height: 5vh;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
+                }
+                .elements {
+                    margin-top: 2em;
+                    color: white;
+
+                    .col {
+                        display: flex;
+                        gap: .5em;
+                        padding: .4em 0;
+
+                        .icon {
+                            color: $gris;
+                        } 
+                    }
+                }
+            }
+        }
+
+        .map-container {
+            // height: 400px;
+            width: 50%;
+            border-radius: 10px;
+            overflow: hidden;
+          }
+    }
+
+    .bringing-business {
+        background: $blue-foncer;
+        height: 30vh;
+        @include flex-center;
+        color: white;
+        font-size: 1.5em;
+    }
+}
+
+
+// banner model
+.banner-model {
+    background: $blue-foncer;
+    margin: 3.5em 3em;
+    padding: 3em 4em;
+    border-radius: 15px;
+    min-height: 40vh;
+
+    span {
+        color: $gris;
+        font-weight: 600;
+        font-size: 1.5em;
+    }
+    p {
+        margin-top: .8em;
+        width: 60%;
+        font-size: 2.3em;
+        color: white;
+    }
+}
