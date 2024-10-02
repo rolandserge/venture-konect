@@ -4,7 +4,6 @@ import Contact from "./app/contact"
 import RootLayout from "./layouts/rootLayout"
 import Mission from "./app/abouts/mission"
 import Teams from "./app/abouts/teams"
-import Corporate from "./app/abouts/corporate"
 import Consultancy from "./app/services/consultancy"
 import Events from "./app/services/events"
 import Prospection from "./app/services/prospection"
@@ -34,10 +33,6 @@ function App() {
         {
           path: "/about-us/our-teams",
           element: <Teams />
-        },
-        {
-          path: "/about-us/corporate-social-responsibility",
-          element: <Corporate />
         },
         {
           path: "/services/consultancy-service",
