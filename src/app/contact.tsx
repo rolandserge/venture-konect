@@ -3,6 +3,7 @@ import BannerModel from "../components/bannerModel";
 import { useForm } from "react-hook-form";
 import { HiOutlineEnvelope, HiOutlinePhone } from "react-icons/hi2";
 import { IoLocationOutline } from "react-icons/io5";
+import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 
 export default function Contact() {
 
@@ -110,6 +111,23 @@ export default function Contact() {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="map-container">
+                <MapContainer
+                    center={[51.505, -0.09]} 
+                    zoom={13} 
+                    style={{ height: '100%', width: '100%' }}
+                >
+                    <TileLayer
+                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                        // attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    />
+                    <Marker position={[51.505, -0.09]}>
+                        <Popup>
+                        A pretty CSS3 popup. <br /> Easily customizable.
+                        </Popup>
+                    </Marker>
+                </MapContainer>
             </div>
         </div>
     )

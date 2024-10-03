@@ -5,17 +5,14 @@ import Partner from '../components/partner'
 import RequestForm from '../components/requestForm'
 import { IoLocationOutline } from "react-icons/io5"
 import { HiOutlinePhone } from 'react-icons/hi'
-import { Map, Marker } from '@vis.gl/react-google-maps'
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Heros from '../components/heros'
 
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
+
 export default function Home() {
 
-    const [markerLocation] = useState({
-        lat: 51.509865,
-        lng: -0.118092,
-    });
 
     return (
         <div className='home-page'>
@@ -188,15 +185,20 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="map-container">
-                    <Map
-                        style={{ borderRadius: "20px" }}
-                        defaultZoom={13}
-                        defaultCenter={markerLocation}
-                        gestureHandling={"greedy"}
-                        disableDefaultUI
+                    <MapContainer 
+                        center={[51.505, -0.09]} 
+                        zoom={13} style={{ height: '100%', width: '100%' }}
                     >
-                        <Marker position={markerLocation} />
-                    </Map>
+                        <TileLayer
+                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                        />
+                        <Marker position={[51.505, -0.09]}>
+                            <Popup>
+                            A pretty CSS3 popup. <br /> Easily customizable.
+                            </Popup>
+                        </Marker>
+                    </MapContainer>
                 </div>
             </div>
             <div className="bringing-business">

@@ -3,17 +3,24 @@ import BannerModel from '../../components/bannerModel'
 export default function Events() {
 
     return (
-        <div className='events-page'>
+        <div className='services-option-page'>
             <BannerModel />
 
-            <div className="content-events">
+            <div className="content">
                 <div className="part-1">
                     <span>Venture Konect's Events</span>
                     <p>
-                        VK believes that there is no better way to accompany our partners than providing key industry talks with perspective to tackle key challenges.
-                        Our targeted dialogues focused specifically on the Energy, Mines and industrial sectors development in the emerging markets, where international investors can build relationships with credible sector stakeholders. The aim is to debate key frameworks in term of 
-                        regulations, legislation ,policies and international best practice that go along with project development.
+                        We believe that impactful discussions and collaboration are essential for addressing the challenges in emerging markets. 
+                        Venture Konect organizes targeted industry dialogues, particularly focused on the energy, mining, and industrial sectors.<br /><br /> 
+                        Our events bring together global investors and credible sector stakeholders to discuss trends, share insights, and forge partnerships.<br />
+                        These events provide a platform for fostering innovation and sustainable development in key industries across the globe.
                     </p>
+                </div>
+                <div className="illustration">
+                    <img
+                        src='/assets/event.jpg'
+                        alt='illustration events'
+                    />
                 </div>
             </div>
         </div>

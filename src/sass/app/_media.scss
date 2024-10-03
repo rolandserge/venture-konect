@@ -1,0 +1,139 @@
+// news styles
+.news-page {
+
+    .news-content-infos {
+        padding: 0 3em 5em 3em;
+
+        .title-news {
+
+            span {
+                color: $blue-foncer;
+                font-weight: 600;
+                font-size: 1.8em;
+                width: max-content;
+                display: flex;
+                gap: .3em;
+                flex-direction: column;
+
+                &::after {
+                    content: "";
+                    height: 1vh;
+                    width: 50%;
+                    background: $jaune;
+                    border-radius: 30px;
+    
+                }
+
+            }
+        }
+
+        .card-news {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2em;
+            margin-top: 2em;
+
+            .card-image {
+                height: 40vh;
+                overflow: hidden;
+                border-radius: 4px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    transition: all .4s ease-in;
+
+                    &:hover {
+                        transform: scale(1.1);
+                        transition: all .4s ease-in;
+                    }
+                }
+            }
+            .infos {
+                margin-top: 1em;
+
+                .title {
+                    font-weight: 600;
+                    font-size: 1.2em;
+                    color: black;
+                }
+                .option {
+                    display: flex;
+                    gap: 1em;
+                    margin-top: 1em;
+                    align-items: center;
+
+                    span {
+                        font-size: .9em;
+                        background: $blue-foncer;
+                        color: white;
+                        padding: .2em .8em;
+                        border-radius: 30px;
+                    }
+                    p {
+                        color: $gris;
+                        font-size: .9em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// gallery photo and video styles
+.gallery {
+
+    .gallery-content {
+        padding: 0 3em 5em 3em;
+
+        .title-gallery {
+            span {
+                color: $blue-foncer;
+                font-weight: 600;
+                font-size: 1.8em;
+                width: max-content;
+                display: flex;
+                gap: .3em;
+                flex-direction: column;
+
+                &::after {
+                    content: "";
+                    height: 1vh;
+                    width: 50%;
+                    background: $jaune;
+                    border-radius: 30px;
+    
+                }
+
+            }
+        }
+
+        .card-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: .5em;
+            margin-top: 2em;
+
+            .card {
+                overflow: hidden;
+                border-radius: 5px;
+                background: white;
+                padding: .3em;
+                
+                img {
+                    width: 100%;
+                    height: 100%;
+                    transition: all .4s ease-in;
+
+                    &:hover {
+                        transform: scale(1.2);
+                        transition: all .4s ease-in;
+                    }
+                }
+            }
+            .card-video {
+                height: 40vh;
+            }
+        }
+    }
+}
