@@ -4,7 +4,10 @@ export default function Consultancy() {
 
     return (
         <div className='services-option-page'>
-            <BannerModel />
+            <BannerModel 
+                title='Service > Consultancy Service'
+                subtitle='At Venture Konect, we specialize in identifying and creating sustainable investment opportunities.'
+            />
 
             <div className="content">
                 {/* <Service /> */}

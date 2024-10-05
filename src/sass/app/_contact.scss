@@ -5,17 +5,37 @@
         padding: 1em 3em;
         justify-content: space-between;
 
+        @include responsive(tab-port){
+            padding: 1em 2em;
+            gap: 2em;
+            flex-direction: column-reverse;
+        }
+
+        @include responsive(phone){
+            padding: 1em;
+        }
+
         .contact-form {
             width: 60%;
             padding: 2em;
             border-radius: 4px;
             background: white;
             height: 100%;
+
+            @include responsive(tab-port){
+                width: 100%;
+                padding: 1em;
+            }
             
             .form-1 {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 gap: 2em 1em;
+
+                @include responsive(phone){
+                    grid-template-columns: 1fr;
+                    gap: 1.3em;
+                }
             }
 
             input {
@@ -77,6 +97,10 @@
 
         .contact-detail {
             width: 35%;
+
+            @include responsive(tab-port){
+                width: 100%;
+            }
             
             .contact-1 {
                 padding: 1.5em;
@@ -109,6 +133,10 @@
 
             .contact-2 {
                 margin-top: 5em;
+
+                @include responsive(tab-port){
+                    margin-top: 2em;
+                }
 
                 .title {
                     font-weight: 600;
@@ -159,5 +187,10 @@
     .map-container {
         height: 60vh;
         margin-top: 5em;
+
+        @include responsive(phone) {
+            height: 40vh;
+            margin-top: 3em;
+        }
     }
 }

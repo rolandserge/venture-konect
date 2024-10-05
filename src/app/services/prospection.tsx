@@ -4,7 +4,10 @@ export default function Prospection() {
 
     return (
         <div className='services-option-page'>
-            <BannerModel />
+            <BannerModel
+                title='Service > Corporate Executive Prospection'
+                subtitle='We organise tailored business excursions for corporate executives to strategic markets'
+            />
 
             <div className="content">
                 <div className="part-1">

@@ -4,6 +4,14 @@
     .news-content-infos {
         padding: 0 3em 5em 3em;
 
+        @include responsive(tab-port){
+            padding: 0 2em 5em 2em;    
+        }
+
+        @include responsive(phone){
+            padding: 0 1em 3em 1em;
+        }
+
         .title-news {
 
             span {
@@ -32,6 +40,16 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 2em;
             margin-top: 2em;
+
+            @include responsive(tab-port){
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5em;
+            }
+
+            @include responsive(phone){
+                grid-template-columns: 1fr;
+                gap: 2.3em;
+            }
 
             .card-image {
                 height: 40vh;
@@ -86,6 +104,14 @@
     .gallery-content {
         padding: 0 3em 5em 3em;
 
+        @include responsive(tab-port){
+            padding: 0 2em 5em 2em;
+        }
+
+        @include responsive(phone){
+            padding: 0 1em 3em 1em;
+        }
+
         .title-gallery {
             span {
                 color: $blue-foncer;
@@ -113,6 +139,15 @@
             grid-template-columns: repeat(3, 1fr);
             gap: .5em;
             margin-top: 2em;
+
+            @include responsive(tab-port){
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include responsive(phone){
+                grid-template-columns: 1fr;
+                gap: 1em;
+            }
 
             .card {
                 overflow: hidden;

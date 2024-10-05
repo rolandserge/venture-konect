@@ -14,10 +14,26 @@
             padding: .6em 5em;
             justify-content: space-between;
 
+            @include responsive(tab-port) {
+                padding: .6em 1em;
+            }
+            @include responsive(phone) {
+                flex-direction: column;
+                align-items: normal;
+                gap: 1em;
+            }
+
             .address {
                 display: flex;
                 align-items: center;
                 gap: 2em;
+
+                @include responsive(tab-port) {
+                    gap: .5em;
+                }
+                @include responsive(phone) {
+                    flex-wrap: wrap;
+                }
 
                 .card {
                     display: flex;
@@ -36,9 +52,31 @@
                 align-items: center;
                 gap: 1.5em;
 
+                @include responsive(tab-port) {
+                    gap: .8em;
+                }
+
+                @include responsive(phone) {
+                    gap: 2em;
+                }
+
                 .icon {
                     color: white;
+                    
+                    &:first-child {
+                        color: blue;
+                    }
+                    &:nth-child(2) {
+                        color: $blue-bg;
+                    }
+                    &:nth-child(3) {
+                        color: black;
+                    }
+                    &:last-child {
+                        color: red;
+                    }
                 }
+
             }
         }
     
@@ -47,18 +85,139 @@
             justify-content: space-between;
             padding: .8em 5em;
             background: white;
+            
+            @include responsive(tab-port) {
+                padding: .8em 3em; 
+                align-items: center;
+            }
+            @include responsive(phone) {
+                padding: .8em 1em;
+            }
         
             .logo {
                 width: 30%;
+
+                @include responsive(tab-port) {
+                    width: 60%;
+                }
         
                 img {
                     width: 55%;
                     height: 100%;
                     object-fit: contain;
+                    cursor: pointer;
                 }
             }
+
+            .burger-card {
+                display: none;
+                
+                @include responsive(tab-port) {
+                    display: block;
+                    position: relative;
+                    cursor: pointer;
+                    padding: .3em;
+                    border-radius: 3px;
+                    background: $blue-foncer;
+                    
+                    @include responsive(tab-port) {
+                        @include flex-center;
+                    }
+                    .burger {
+                        color: white;
+                    }
+                }
+
+                .modal {
+                    position: absolute;
+                    background: white;
+                    top: 3.5em;
+                    right: 0;
+                    opacity: 0;
+                    transform: translateY(3em);
+                    transition: all .3s ease-in-out;
+                    padding: 1.5em;
+                    border-radius: 4px;
+    
+                    &.open {
+                        transform: translateY(0);
+                        opacity: 1;
+                        transition: transform .3s ease-in-out;
+                    }
+    
+                    .nav-mobile {
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+
+                        li {
+                            list-style: none;
+                            cursor: pointer;
+                            font-size: 1em;
+                            font-weight: 600;
+                            padding: .6em 0;
+                            text-align: center;
+                            width: max-content;
+    
+                            .active {
+                                color: $jaune;
+                            }
+
+                            span:hover {
+                                color: $jaune
+                            }
+                        }
+                        .image-li {
+                            width: 20%;
+                            height: 8vh;
+                            cursor: pointer;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                        .contact {
+                            text-decoration: none;
+                            color: black;
+                    
+                            &:hover {
+                                color: $jaune;
+                            }
+                            &.active {
+                                color: $jaune
+                            }
+                        }
+    
+                        .accordeons {
+                            display: grid; 
+                            grid-template-rows: 0fr;
+                            transition: .5s grid-template-rows ease;
+    
+                            & > ul {
+                                overflow: hidden;
+                            }
+    
+                            li {
+                                width: 100%;
+                                font-weight: normal;
+                            }
+                            .lien {
+                                text-decoration: none;
+                                color: black;
+                                width: max-content;
+                            }
+    
+                            &.open {
+                                grid-template-rows: 1fr;
+                            }
+                        }
+                    }
+                }
+
+            }
         
-            ul {
+            .nav-destkop {
                 display: flex;
                 list-style: none;
                 flex-wrap: wrap;
@@ -67,6 +226,13 @@
                 width: 50%;
                 justify-content: space-between;
                 align-items: center;
+
+                @include responsive(tab-land) {
+                    width: 65%;
+                }
+                @include responsive(tab-port) {
+                    display: none;
+                }
 
                 .contact {
                     text-decoration: none;
@@ -86,7 +252,6 @@
                     cursor: pointer;
                     font-size: 1.1em;
                     padding: 1em 0;
-                    // color: $blue-bg;
 
                     &:hover .submenu {
                         height: auto;
@@ -153,10 +318,16 @@
     font-size: 1.3em;
     color: white;
     font-weight: bold;
+    @include flex-center;
 }
-.swiper-button-prev, .swiper-button-next {
-    width: 40px;
-    height: 40px;
+.swiper-button-prev {
     background: $blue-foncer;
-    border-radius: 4px;
+    left: 0;
+    @include flex-center;
+}
+
+.swiper-button-next {
+    background: $blue-foncer;
+    right: 0;
+    @include flex-center;
 }

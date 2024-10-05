@@ -201,9 +201,21 @@ export default function Home() {
                 </div>
             </div>
             <div className="bringing-business">
-                <h2>Bringing Business Partners Together.</h2>
+                <div className="overlay">
+                    <h2>Bringing Business Partners Together.</h2>
+                </div>
             </div>
             <RequestForm />
+
+            <div className="corporate-social">
+                <div className="text">
+                    <h1>Corporate Social Responsibility</h1>
+                    <p>Through our CSR initiatives, Venture Konect strives to contribute to the sustainable transformation of emerging markets, ensuring that our activities leave a lasting, positive impact on the environment, society, and economy.</p>
+                </div>
+                <div className="card-image">
+                    <img src="/assets/csr.jpg" alt="crs image" />
+                </div>
+            </div>
         </div>
     )
 }

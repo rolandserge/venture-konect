@@ -4,11 +4,17 @@ import { CiYoutube } from "react-icons/ci";
 import { TiSocialFacebook } from "react-icons/ti";
 import { RiTwitterXFill } from "react-icons/ri";
 import { BiLogoLinkedin } from "react-icons/bi";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { useState } from "react";
 
 export default function NavBar() {
 
     const location = useLocation()
+    const [active, setActive] = useState(false)
+    const [open, setOpen] = useState(false)
+    const [index, setIndex] = useState(0)
+    const navigate = useNavigate()
 
     return (
         <div className="header">
@@ -48,9 +54,10 @@ export default function NavBar() {
                         <img
                             src='/assets/venture.png'
                             alt='Logo official Venture Konect'
+                            onClick={() => navigate("/")}
                         />
                     </div>
-                    <ul>
+                    <ul className="nav-destkop">
                         <li><Link to="/" className={location.pathname === "/" ? "contact active" : "contact"}>Home</Link></li>
                         <li>
                             <span className={location.pathname.includes("/about-us") ? "active" : "test"}>About Us</span>
@@ -121,6 +128,148 @@ export default function NavBar() {
                             />
                         </li>
                     </ul>
+                    <div className="burger-card">
+                        {/* <div className="card"> */}
+                            <RxHamburgerMenu 
+                                size={30} 
+                                className="burger" 
+                                onClick={() => setActive(!active)}
+                            />
+                        {/* </div> */}
+                        <div className={active ? "modal open" : "modal"}>
+                            <ul className="nav-mobile">
+                                <li>
+                                    <Link 
+                                        to={"/"} 
+                                        className={location.pathname === "/" ? "active contact": "contact"}
+                                        onClick={() => setActive(false)}
+                                    >
+                                        Home
+                                    </Link>
+                                </li>
+                                <li>
+                                    <span 
+                                        className={location.pathname.includes("/about-us") ? "active": "test"}
+                                        onClick={() => { setOpen(!open); setIndex(2)}}
+                                    >
+                                        About Us
+                                    </span>
+                                    <div className={open && index == 2 ? "accordeons open" : "accordeons"}>
+                                        <ul>
+                                            <li>
+                                                <Link 
+                                                    to="/about-us/our-mission" 
+                                                    className="lien"
+                                                    onClick={() => setActive(false)}
+                                                >
+                                                    Our Mission / Vision
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link 
+                                                    to="/about-us/our-teams" 
+                                                    className="lien"
+                                                    onClick={() => setActive(false)}
+                                                >
+                                                    Our Teams
+                                                </Link>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span 
+                                        className={location.pathname.includes("/services") ? "active": "test"}
+                                        onClick={() => { setOpen(!open); setIndex(3)}}
+                                    >
+                                        Services
+                                    </span>
+                                    <div className={open && index == 3 ? "accordeons open" : "accordeons"}>
+                                        <ul>
+                                            <li>
+                                                <Link 
+                                                    to="/services/venture-konect's-events" 
+                                                    onClick={() => setActive(false)} 
+                                                    className="lien"
+                                                >
+                                                    Venture Konect's Events
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link 
+                                                    to="/services/consultancy-service" 
+                                                    className="lien"
+                                                    onClick={() => setActive(false)}
+                                                >
+                                                    Consultancy Service
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link 
+                                                    to="/services/corporate-excecute-prospection" 
+                                                    className="lien"
+                                                    onClick={() => setActive(false)}
+                                                >
+                                                    Corporate Excecute Prospection
+                                                </Link>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span 
+                                        className={location.pathname.includes("/media") ? "active": "test"}
+                                        onClick={() => { setOpen(!open); setIndex(4)}}
+                                    >
+                                        Media
+                                    </span>
+                                    <div className={open && index === 4 ? "accordeons open" : "accordeons"}>                             
+                                        <ul>
+                                            <li>
+                                                <Link 
+                                                    to="/media/news" 
+                                                    className="lien"
+                                                    onClick={() => setActive(false)}
+                                                >
+                                                    News
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link 
+                                                    to="/media/photo-gallery" 
+                                                    className="lien"
+                                                    onClick={() => setActive(false)}
+                                                >
+                                                    Photo Gallery
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link 
+                                                    to="/media/video-gallery" 
+                                                    className="lien"
+                                                    onClick={() => setActive(false)}
+                                                >
+                                                    Video Gallery
+                                                </Link>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <Link 
+                                        to="/contact" 
+                                        className={location.pathname === "/contact" ? "contact active": "contact"}
+                                        onClick={() => setActive(false)}
+                                    >
+                                        Contacts
+                                    </Link>
+                                </li>
+                                <li className="image-li" onClick={() => setActive(false)}>
+                                    <img src="/assets/france.png" alt="Langue image" />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </nav>
         </div>

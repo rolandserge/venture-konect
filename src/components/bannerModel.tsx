@@ -1,10 +1,15 @@
 
-export default function BannerModel() {
+interface BannerProps {
+    title: string,
+    subtitle: string,
+}
+
+export default function BannerModel({ title, subtitle } : BannerProps) {
 
     return (
         <div className="banner-model">
-            <span>Contact Us</span>
-            <p>Reach Out for Inquiries, Partnerships, and Opportunities at the Venture Konect</p>
+            <span>{title}</span>
+            <p>{subtitle}</p>
         </div>
     )
 }

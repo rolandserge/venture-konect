@@ -35,7 +35,7 @@ export default function Partner() {
                         spaceBetween: 20
                     },
                     1200: {
-                        slidesPerView: 6,
+                        slidesPerView: 5,
                         spaceBetween: 70
                     }
                 }}

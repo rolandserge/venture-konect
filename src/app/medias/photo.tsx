@@ -4,7 +4,10 @@ export default function Photo() {
 
     return (
         <div className='gallery'>
-            <BannerModel />
+            <BannerModel
+                title='Media > Photo Gallery'
+                subtitle='Explore our photo gallery to capture moments that showcase our journey, achievements, and memorable events.'
+            />
 
             <div className="gallery-content">
                 <div className="title-gallery">

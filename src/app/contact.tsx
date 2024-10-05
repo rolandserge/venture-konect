@@ -13,7 +13,10 @@ export default function Contact() {
 
     return (
         <div className="contact-page">
-            <BannerModel />
+            <BannerModel
+                title="Contact Us"
+                subtitle="Reach Out for Inquiries, Partnerships, and Opportunities at the Venture Konect"
+            />
 
             <div className="content-page">
                 <form onSubmit={handleSubmit(onSubmit)} className="contact-form">

@@ -17,4 +17,12 @@ export default defineConfig({
     },
   },
   plugins: [react()],
+  server: {
+      host: '0.0.0.0', // Écoute sur toutes les interfaces réseau
+      port: 5173,      // Port pour le serveur de développement
+      hmr: {
+        host: '192.168.1.31', // Remplacez par l'adresse IP de votre machine
+        port: 5173
+      }
+  },
 })

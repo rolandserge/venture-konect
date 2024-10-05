@@ -5,7 +5,10 @@ export default function News() {
 
     return (
         <div className='news-page'>
-            <BannerModel />
+            <BannerModel
+                title='Media > News'
+                subtitle='Stay updated with the latest news and insights from our industry, covering key developments and trends shaping the future.'
+            />
 
             <div className="news-content-infos">
                 <div className="title-news">

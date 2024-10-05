@@ -1,5 +1,4 @@
 import 'react-phone-number-input/style.css'
-// "With country select" component.
 import PhoneInputWithCountry from "react-phone-number-input/react-hook-form"
 import { useForm } from "react-hook-form";
 import { IoLocationOutline } from "react-icons/io5";

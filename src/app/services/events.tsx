@@ -4,7 +4,10 @@ export default function Events() {
 
     return (
         <div className='services-option-page'>
-            <BannerModel />
+            <BannerModel
+                title='Service > Events'
+                subtitle='We believe that impactful discussions and collaboration are essential for addressing'
+            />
 
             <div className="content">
                 <div className="part-1">

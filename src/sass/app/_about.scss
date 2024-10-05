@@ -2,35 +2,6 @@
 
     .about-us-content {
 
-        .card-about {
-            display: flex;
-            align-items: center;
-            gap: 1em;
-            padding: 1em 0 1em 3em;
-
-            .image {
-                width: 50%;
-                height: 55vh;
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-            }
-            .infos {
-                width: 50%;
-
-                span {
-                    color: $blue-foncer;
-                    font-weight: 600;
-                    font-size: 1.5em;
-                }
-                p {
-                    margin-top: 2em;
-                }
-            }
-        }
         .card-part-1 {
             display: grid;
             grid-template-columns: 60% 40%;
@@ -38,6 +9,14 @@
             margin-top: 2em;
             justify-content: center;
             // background: $blue-foncer;
+
+            @include responsive(tab-port){
+                grid-template-columns: 1fr;
+                padding: 0;
+            }
+            @include responsive(phone){
+                // padding: 0 1em;
+            }
 
             .image {
                     
@@ -55,6 +34,10 @@
                 background: white;
                 padding: 1.5em;
                 
+                @include responsive(tab-port){
+                    box-shadow: none;
+                    border-radius: 0px;
+                }
                 span {
                     font-weight: 600;
                     width: max-content;
@@ -64,8 +47,6 @@
                     color: $blue-bg;
 
                 }
-
-                
 
                 .vision {
                     margin-top: 1.1em;
@@ -95,6 +76,16 @@
             margin-top: 5em;
             padding: .5em 3em;
 
+            @include responsive(tab-port){
+                padding: .5em 2em;
+                margin-top: 3em;
+            }
+
+            @include responsive(phone){
+                padding: .5em 1em;
+                margin-top: 2em;
+            }
+
             span {
                 color: $blue-foncer;
                 font-weight: 600;
@@ -104,11 +95,26 @@
             p {
                 padding-top: 2em;
                 width: 80%;
+
+                @include responsive(tab-port){
+                    width: 90%;
+                }
+                @include responsive(phone){
+                    width: 100%;
+                }
             }
         }
 
         .services {
             padding: 4em 3em;
+
+            @include responsive(tab-port){
+                padding: 3em 2em;
+            }
+
+            @include responsive(phone){
+                padding: 3em 1em;
+            }
 
             .title-service {
                 color: $blue-foncer;
@@ -116,6 +122,10 @@
                 font-size: 1.8em;
                 text-align: center;
                 margin-bottom: 2em;
+
+                @include responsive(phone){
+                    margin-bottom: 1em;
+                }
             }
         }
     }
@@ -128,23 +138,52 @@
     .our-teams {
         padding: 1em 5em 5em 5em;
 
+        @include responsive(tab-land) {
+            padding: 1em 3em 5em 3em;
+        }
+
+        @include responsive(tab-port) {
+            padding: 1em 2em 4em 2em;
+        }
+
+        @include responsive(phone) {
+            padding: 1em 1em 3em 1em;
+        }
+
         .card-teams {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 5em 2em;
 
+            @include responsive(tab-port) {
+                grid-template-columns: 1fr;
+            }
+
             .card {
                 display: flex;
-                gap: 2em;
+                gap: 1em;
+
+                @include responsive(phone) {
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 2em;
+                }
 
                 .card-image {
-                    width: 30%;
+                    width: 180px;
+                    height: 180px;
                     overflow: hidden;
+                    border-radius: 3px;
 
+                    @include responsive(phone) {
+                        width: 250px;
+                        height: 250px;
+                    }
 
                     img {
                         width: 100%;
-                        height: auto;
+                        height: 100%;
+                        object-fit: cover;
                         transition: all .3s ease-in-out;
 
                         &:hover {
@@ -156,8 +195,13 @@
                 .info {
                     display: flex;
                     flex-direction: column;
-                    gap: 1em;
+                    gap: .8em;
                     width: 70%;
+
+                    @include responsive(phone) {
+                        width: 100%;
+                        align-items: center;
+                    }
 
                     .head {
                         p {
@@ -171,6 +215,10 @@
                     }
                     p {
                         width: 92%;
+
+                        @include responsive(tab-port) {
+                            width: 100%;
+                        }
                     }
                     .action {
                         display: flex;

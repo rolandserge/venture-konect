@@ -5,7 +5,10 @@ import { videos } from '../../data'
 export default function Video() {
     return (
         <div className='gallery'>
-            <BannerModel />
+            <BannerModel 
+                title='Media > Video Gallery'
+                subtitle='Dive into our video gallery to experience highlights, stories, and events through dynamic visuals.'
+            />
 
             <div className="gallery-content">
                 <div className="title-gallery">

@@ -5,7 +5,10 @@ export default function Teams() {
 
     return (
         <div className='teams-page'>
-            <BannerModel />
+            <BannerModel 
+                title='About > Teams'
+                subtitle='Our teams are dedicated to delivering innovative solutions, combining expertise and collaboration to achieve excellence in every project.'
+            />
             
             <div className="our-teams">
                 <div className="card-teams">
