@@ -44,10 +44,10 @@
                 height: 34vh;
                 overflow: hidden;
                 border-radius: 30px;
+                width: 100%; 
 
                 @include responsive(phone){
                     height: 20vh;
-                    width: 100%;
                 }
 
                 img {
@@ -103,6 +103,10 @@
             width: 100%;
             height: max-content;
 
+            @include responsive(phone) {
+                padding: 1em;
+            }
+
             input {
                 height: 7vh;
                 padding: 1em;
@@ -110,10 +114,15 @@
                 border: none;
                 border-radius: 4px;
                 outline-color: $blue-bg;
+
+                @include responsive(tab-port){
+                    width: 100%;
+                }
             }
             .flex {
                 display: flex;
                 align-items: center;
+                flex-wrap: wrap;
                 gap: 3em;
                 
                 div {
@@ -127,6 +136,20 @@
                 display: flex;
                 align-items: center;
                 gap: .7em;
+
+                @include responsive(tab-port) {
+                    
+                    input {
+                        width: 3%;
+                    }
+                }
+                @include responsive(phone) {
+                    align-items: normal;
+                    
+                    input {
+                        width: 15%;
+                    }
+                }
                 
                 label {
                     font-size: .9em;

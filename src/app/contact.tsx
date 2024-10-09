@@ -5,11 +5,26 @@ import { HiOutlineEnvelope, HiOutlinePhone } from "react-icons/hi2";
 import { IoLocationOutline } from "react-icons/io5";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 
+type ContactFormsProps = {
+    firstName: string,
+    lastName: string,
+    email: string,
+    phone: number,
+    company: string,
+    job: string,
+    industry: string,
+    city: string,
+    confirm: boolean,
+    about: string,
+    interest: string,
+    message: string
+}
+
 export default function Contact() {
 
-    const { register, control, handleSubmit } = useForm();
+    const { register, control, handleSubmit } = useForm<ContactFormsProps>();
 
-    const onSubmit = (data: any) => console.log(data);
+    const onSubmit = (data: ContactFormsProps) => console.log(data);
 
     return (
         <div className="contact-page">
@@ -21,9 +36,21 @@ export default function Contact() {
             <div className="content-page">
                 <form onSubmit={handleSubmit(onSubmit)} className="contact-form">
                     <div className="form-1">
-                        <input type="text" placeholder="Enter your FirstName" />
-                        <input type="text" placeholder="Enter your LastName" />
-                        <input type="email" placeholder="Enter your Email" />
+                        <input 
+                            type="text" 
+                            placeholder="Enter your FirstName"
+                            {...register("firstName", { required: true })}
+                        />
+                        <input 
+                            type="text" 
+                            placeholder="Enter your LastName"
+                            {...register("lastName", { required: true })}
+                        />
+                        <input 
+                            type="email"
+                            placeholder="Enter your Email" 
+                            {...register("email", { required: true })}
+                        />
                         <PhoneInputWithCountry
                             name="phone"
                             placeholder="Enter phone number"
@@ -31,13 +58,29 @@ export default function Contact() {
                             rules={{ required: true }}
                             defaultCountry="CI"
                         />
-                        <input type="text" placeholder="Enter your Company Name" id="" />
-                        <input type="text" placeholder="Enter your Job description" />
-                        <input type="text" placeholder="Enter your Industry" />
-                        <input type="text" placeholder="Enter your City" />
+                        <input 
+                            type="text" 
+                            placeholder="Enter your Company Name"
+                            {...register("company", { required: true })}
+                        />
+                        <input 
+                            type="text" 
+                            placeholder="Enter your Job description" 
+                            {...register("job", { required: true })}
+                        />
+                        <input 
+                            type="text" 
+                            placeholder="Enter your Industry"
+                            {...register("industry", { required: true })}
+                        />
+                        <input 
+                            type="text" 
+                            placeholder="Enter your City" 
+                            {...register("city", { required: true })}
+                        />
                         <div>
                             <label htmlFor="about">Where did you hear about us</label>
-                            <select name="" id="about">
+                            <select id="about" {...register("about", { required: true })}>
                                 <option value="">Choose your answer</option>
                                 <option value="Internet">Via internet</option>
                                 <option value="Referrals">Referrals</option>
@@ -47,7 +90,7 @@ export default function Contact() {
                         </div>
                         <div>
                             <label htmlFor="interest">What is your interest ?</label>
-                            <select name="" id="interest">
+                            <select id="interest" {...register("interest", { required: true })}>
                                 <option value="">Choose your interest</option>
                                 <option value="Consultancy">Consultancy</option>
                                 <option value=" Corporate Executive Prospection">Corporate Executive Prospection</option>
@@ -56,9 +99,10 @@ export default function Contact() {
                         </div>
                     </div>
                     <div className="message">
-                        <textarea name="" rows={10} id="">
-
-                        </textarea>
+                        <textarea
+                            rows={10} 
+                            {...register("message", { required: true })}
+                        ></textarea>
                     </div>
                     <div className="terms">
                         <input 

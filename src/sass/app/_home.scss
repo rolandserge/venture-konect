@@ -88,6 +88,7 @@
 
                         @include responsive(phone) {
                             font-size: 1.5em;
+                            text-align: center;
                         }
                     }
                 }
@@ -155,10 +156,13 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 2em 1em;
-            padding: 3em 1em;
 
+            @include responsive(tab-port) {
+                padding: 3em 2em;
+            }
             @include responsive(phone) {
                 grid-template-columns: 1fr;
+                padding: 3em 1em;
             }
 
             .card {
