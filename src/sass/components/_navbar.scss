@@ -1,17 +1,11 @@
 .header {
-    // display: initial;
-
     nav {
-        position: sticky;
-        top: 0;
-        z-index: 100;
-
 
         .head {
             background: $blue-foncer;
             display: flex;
             align-items: center;
-            padding: .6em 5em;
+            padding: .8em 5em;
             justify-content: space-between;
 
             @include responsive(tab-port) {
@@ -57,11 +51,15 @@
                 }
 
                 @include responsive(phone) {
-                    gap: 2em;
+                    gap: 1em;
+                    margin-top: .5em;
                 }
 
                 .icon {
-                    color: white;
+                    background: white;
+                    @include flex-center;
+                    padding: .5em;
+                    border-radius: 50%;
                     
                     &:first-child {
                         color: blue;
@@ -100,12 +98,20 @@
                 @include responsive(tab-port) {
                     width: 60%;
                 }
+
+                @include responsive(phone) {
+                    width: 100%;
+                }
         
                 img {
                     width: 55%;
                     height: 100%;
                     object-fit: contain;
                     cursor: pointer;
+
+                    @include responsive(phone) {
+                        width: 60%;
+                    }
                 }
             }
 
@@ -140,8 +146,8 @@
                     border-radius: 4px;
     
                     &.open {
-                        transform: translateY(0);
                         opacity: 1;
+                        transform: translateY(0);
                         transition: transform .3s ease-in-out;
                     }
     
@@ -169,7 +175,7 @@
                         }
                         .image-li {
                             width: 20%;
-                            height: 8vh;
+                            height: 5vh;
                             cursor: pointer;
 
                             img {
@@ -205,7 +211,7 @@
                             .lien {
                                 text-decoration: none;
                                 color: black;
-                                width: max-content;
+                                width: fit-content;
                             }
     
                             &.open {

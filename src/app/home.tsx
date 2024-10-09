@@ -39,11 +39,8 @@ export default function Home() {
                             <p>Events Wapecc23</p>
                         </div>
                         <p>
-                            WAPECC Lome23 is the 3rd of a series of events held in the region, to bring together the key players and drive forward the region's energy and infrastructure transformation, ensuring that reliable and affordable energy becomes a reality for all. 
-                            This year’s edition is hosted under the awaited esteemed Patronage of His Excellency Mr. Faure Essozimna Gnassingbé...
-                            {/* ,  */}
-                            {/* President of the Republic of Togo, and chaired by Monsieur Robert Koffi Messan EKLO, Minister Delegate to the President of the 
-                            Republic in charge Mines and Energy resources of Togo, with the facilitation of the Association of Power Utilities of Africa (APUA), and will take place tentatively from the 19th-21st 2025 in Lomé. */}
+                            WAPECC Lome23 is the 3rd of a series of events held in the region, to bring together the key players 
+                            and drive forward the region's energy and infrastructure transformation, ensuring that reliable and affordable energy becomes a reality for all... 
                         </p>
                         <div className="action-button">
                             <Link to="#" target='_blanket' className='site'>Go to the website</Link>
@@ -187,6 +184,7 @@ export default function Home() {
                     <MapContainer 
                         center={[51.505, -0.09]} 
                         zoom={13} style={{ height: '100%', width: '100%' }}
+                        scrollWheelZoom={false}
                     >
                         <TileLayer
                             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -205,6 +203,7 @@ export default function Home() {
                     <h2>Bringing Business Partners Together.</h2>
                 </div>
             </div>
+            
             <RequestForm />
 
             <div className="corporate-social">

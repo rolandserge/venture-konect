@@ -20,6 +20,14 @@
         position: relative;
         border-radius: 3px;
         overflow: hidden;
+
+        @include responsive(tab-port) {
+           height: 30vh; 
+        }
+
+        @include responsive(phone) {
+            height: 35vh;
+        }
         
         img {
             height: 100%;
@@ -44,8 +52,15 @@
             justify-content: space-between;
             background: $blue-bg;
             gap: 1.5em;
-            transform: translateY(10em);
+            transform: translateY(60%);
             transition: all 0.3s ease-in;
+
+            @include responsive(tab-port) {
+                transform: translateY(70%);
+            }
+            @include responsive(phone) {
+                transform: translateY(65%);
+            }
 
             span {
                 font-weight: 600;

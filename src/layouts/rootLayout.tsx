@@ -15,7 +15,7 @@ export default function RootLayout() {
 
     return (
         <div style={{ background: "#f1f1f1"}}>      
-            <header>
+            <header style={{ position: "sticky", top: "0", zIndex: "1000"}}>
                 <NavBar />
             </header>
             <section>

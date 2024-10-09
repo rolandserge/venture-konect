@@ -36,16 +36,16 @@ export default function NavBar() {
                     </div>
                     <div className="reseaux-sociaux">
                         <Link to="#" target="_blanket" className="icon">
-                            <TiSocialFacebook size={24} className="fb" />
+                            <TiSocialFacebook size={20} className="fb" />
                         </Link>
                         <Link to="#" target="_blanket" className="icon">
-                            <BiLogoLinkedin size={24} className="in" />
+                            <BiLogoLinkedin size={20} className="in" />
                         </Link>
                         <Link to="#" target="_blanket" className="icon">
                             <RiTwitterXFill size={20} className="tw" />
                         </Link>
                         <Link to="#" target="_blanket" className="icon">
-                            <CiYoutube size={24} className="yt" />
+                            <CiYoutube size={20} className="yt" />
                         </Link>   
                     </div>
                 </div>
@@ -72,7 +72,6 @@ export default function NavBar() {
                                         Our teams
                                     </Link>
                                 </li>
-                                {/* <li><Link to="/about-us/corporate-social-responsibility" className="lien">Corporate Social Responsibility</Link></li> */}
                             </ul>
                         </li>
                         <li>
@@ -95,7 +94,6 @@ export default function NavBar() {
                                 </li>
                             </ul>
                         </li>
-                        {/* <li>Events</li> */}
                         <li>
                             <span className={location.pathname.includes("/media") ? "active" : "test"}>Media</span> 
                             <ul className="submenu">

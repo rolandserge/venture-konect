@@ -5,11 +5,11 @@
         width: 100%;
 
         @include responsive(tab-port) {
-            
+            height: 70vh;
         }
         
         @include responsive(phone) {
-            height: 60vh;
+            min-height: 65vh;
         }
 
         .mySlide {
@@ -36,12 +36,16 @@
                 flex-direction: column;
                 background: rgba($color: #000000, $alpha: .3);
 
-                @include responsive(tab-port) {
+                @include responsive(tab-land) {
                     padding: 2em 4em;
                 }
 
                 @include responsive(tab-port) {
                     padding: 1.5em 2em;
+                }
+
+                @include responsive(phone) {
+                    min-height: 65vh;
                 }
 
                 h1 {
@@ -57,7 +61,7 @@
                         width: 100%;
                     }
                     @include responsive(phone) {
-                        font-size: 2em;
+                        font-size: 1.5em;
                     }
                 }
                 p {
