@@ -45,6 +45,10 @@
                 background: #f1f1F1;
                 border: none;
                 border-radius: 4px;
+
+                @include responsive(phone) {
+                    width: 100%;
+                }
             }
             select {
                 padding: 1em;
