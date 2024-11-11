@@ -1,0 +1,115 @@
+{
+    "layout": {
+        "navbar": {
+            "home": "Accueil",
+            "contact": "Contactez-nous",
+            "items": [
+                {
+                    "title": "A propos de nous",
+                    "key": "/about-us",
+                    "submenu": [
+                        {
+                            "title": "Notre Mission / Vision",
+                            "lien": "/about-us/our-mission"
+                        },
+                        {
+                            "title": "Notre équipe",
+                            "lien": "/about-us/our-teams"
+                        }
+                    ]
+                },
+                {
+                    "title": "Services",
+                    "key": "/services",
+                    "submenu": [
+                        {
+                            "title": "Événements de Venture Konect",
+                            "lien": "/services/venture-konect's-events"
+                        },
+                        {
+                            "title": "Service de consultance",
+                            "lien": "/services/consultancy-service"
+                        },
+                        {
+                            "title": "Prospection des cadres d'entreprise",
+                            "lien": "/services/corporate-excecute-prospection"
+                        }
+                    ]
+                },
+                {
+                    "title": "Media",
+                    "key": "/media",
+                    "submenu": [
+                        {
+                            "title": "Actualités",
+                            "lien": "/media/news"
+                        },
+                        {
+                            "title": "Galerie photos",
+                            "lien": "/media/photo-gallery"
+                        },
+                        {
+                            "title": "Galerie vidéos",
+                            "lien": "/media/video-gallery"
+                        }
+                    ]
+                }
+            ]
+        } 
+    },
+    "home": {
+        "about-us": {
+            "title": "A propos de nous",
+            "content": ""
+        },
+        "localisation": {
+            "london-office": "Bureau de London",
+            "abidjan-office": "Bureau d'Abidjan",
+            "dakar-office": "Bureau de Dakar",
+            "paris-office": "Bureau de Paris"
+        }
+    },
+    "footer": {
+        "social": "Reseaux sociaux",
+        "touch": "Prenez contact",
+        "links": [
+            {
+                "id": "tweet",
+                "title": "Derniers Tweets",
+                "content": [
+                    {
+                        "lien": "#",
+                        "texte": "Under the patronage of the Ministry of Petroleum and Energy Senegal..."
+                    },
+                    {
+                        "lien": "#",
+                        "texte": "Under the patronage of the Ministry of Petroleum of Senegal..."
+                    },
+                    {
+                        "lien": "#",
+                        "texte": "Under the patronage of the Ministry of Petroleum of Senegal..."
+                    }
+                ]
+            },
+            {
+                "id": "news",
+                "title": "Actualités récentes",
+                "content": [
+                    {
+                        "lien": "#",
+                        "texte": "Under the patronage of the Ministry of Petroleum of Senegal..."
+                    },
+                    {
+                        "lien": "#",
+                        "texte": "Under the patronage of the Ministry of Petroleum of Senegal..."
+                    },
+                    {
+                        "lien": "#",
+                        "texte": "Under the patronage of the Ministry of Petroleum of Senegal..."
+                    }
+                ]
+            }
+        ],
+        "bas-footer": "Copyright © 2024 Venture Konect Tous droits réservés"
+    }
+}

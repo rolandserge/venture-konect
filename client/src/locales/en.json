@@ -1,0 +1,115 @@
+{
+    "layout": {
+        "navbar": {
+            "home": "Home",
+            "contact": "Contact Us",
+            "items": [
+                {
+                    "title": "About Us",
+                    "key": "/about-us",
+                    "submenu": [
+                        {
+                            "title": "Our Mission / Vision",
+                            "lien": "/about-us/our-mission"
+                        },
+                        {
+                            "title": "Our Teams",
+                            "lien": "/about-us/our-teams"
+                        }
+                    ]
+                },
+                {
+                    "title": "Services",
+                    "key": "/services",
+                    "submenu": [
+                        {
+                            "title": "Venture Konect's Events",
+                            "lien": "/services/venture-konect's-events"
+                        },
+                        {
+                            "title": "Consultancy service",
+                            "lien": "/services/consultancy-service"
+                        },
+                        {
+                            "title": "Corporate Executive Prospection",
+                            "lien": "/services/corporate-excecute-prospection"
+                        }
+                    ]
+                },
+                {
+                    "title": "Media",
+                    "key": "/media",
+                    "submenu": [
+                        {
+                            "title": "News",
+                            "lien": "/media/news"
+                        },
+                        {
+                            "title": "Photo Gallery",
+                            "lien": "/media/photo-gallery"
+                        },
+                        {
+                            "title": "Video Gallery",
+                            "lien": "/media/video-gallery"
+                        }
+                    ]
+                }
+            ]
+        } 
+    },
+    "home": {
+        "about-us": {
+            "title": "About Us",
+            "content": "We are a company with an emerging market-focused team of professionals specialising in  promoting and facilitating socio-economic development,  with particular focus on supporting private sector engagement towards local institutions. <br /><br /> At Venture Konect, we believe that our experience, skills and passion can impact socio-economic de velopment across the globe. Our aim is to develop a strong partnership with both locales institutions and the global stakeholders. This is achieved through an uncompromising  commitment to the highest standards of <strong>Professionalism</strong>, <strong>Integrity </strong> & <strong>Confidentiality.</strong>"
+        },
+        "localisation": {
+            "london-office": "London Office",
+            "abidjan-office": "Abidjan Office",
+            "dakar-office": "Dakar Office",
+            "paris-office": "Paris Office"
+        }
+    },
+    "footer": {
+        "social": "Social Network",
+        "touch": "Get in Touch",
+        "links": [
+            {
+                "id": "tweet",
+                "title": "Latest Tweets",
+                "content": [
+                    {
+                        "lien": "#",
+                        "texte": "Under the patronage of the Ministry of Petroleum and Energy Senegal..."
+                    },
+                    {
+                        "lien": "#",
+                        "texte": "Under the patronage of the Ministry of Petroleum of Senegal..."
+                    },
+                    {
+                        "lien": "#",
+                        "texte": "Under the patronage of the Ministry of Petroleum of Senegal..."
+                    }
+                ]
+            },
+            {
+                "id": "news",
+                "title": "Recent News",
+                "content": [
+                    {
+                        "lien": "#",
+                        "texte": "Under the patronage of the Ministry of Petroleum of Senegal..."
+                    },
+                    {
+                        "lien": "#",
+                        "texte": "Under the patronage of the Ministry of Petroleum of Senegal..."
+                    },
+                    {
+                        "lien": "#",
+                        "texte": "Under the patronage of the Ministry of Petroleum of Senegal..."
+                    }
+                ]
+            }
+        ],
+        "bas-footer": "Copyright © 2024 Venture Konect All Rights Reserved"
+    }
+}
