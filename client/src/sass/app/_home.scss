@@ -5,12 +5,13 @@
         padding: 1em .5em;
         @include flex-center;
         background: black;
-
+        
         p {
             text-transform: uppercase;
             font-size: 1.5em;
             text-align: center;
-            color: white;
+            font-weight: bold;
+            color: $jaune;
 
             @include responsive(phone) {
                 font-size: 1.1em;
@@ -143,6 +144,7 @@
         min-height: 27vh;
         color: white;
         font-size: 1.5em;
+        margin-top: 5em;
 
         @include responsive(phone) {
             font-size: 1.1em;
@@ -166,8 +168,10 @@
     .corporate-social {
         display: grid;
         grid-template-columns: 60% 40%;
+        grid-template-rows: auto;
         background: black;
         margin-top: 2em;
+        align-items: center;
 
         @include responsive(tab-port) {
             grid-template-columns: 1fr;
@@ -175,6 +179,7 @@
 
         .text {
             padding: 1em 4em;
+            // height: max-content;
 
             @include responsive(tab-land) {
                 padding: 1em 3em;
@@ -200,7 +205,7 @@
             }
         }
         .card-image {
-            height: 32vh;
+            // height: 32vh;
             overflow: hidden;
 
             @include responsive(tab-land) {
@@ -235,20 +240,15 @@
     span {
         color: $gris;
         font-weight: 600;
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
     p {
         margin-top: .8em;
-        width: 60%;
-        font-size: 2.3em;
+        width: 100%;
+        font-size: 2em;
         color: white;
 
-        @include responsive(tab-land){
-            width: 80%;
-        }
-
         @include responsive(tab-port){
-            width: 100%;
             font-size: 1.8em
         }
 
@@ -294,4 +294,11 @@
             margin-top: 1.5em;
         }
     }
+}
+
+.m_615af6c9.mantine-Modal-title {
+    
+    font-weight: 600;
+    color: #002e5b;
+    font-size: 1.5em;
 }

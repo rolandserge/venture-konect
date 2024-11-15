@@ -1,6 +1,9 @@
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 export default function Event() {
+
+    const { t } = useTranslation()
 
     return (
         <div className="site-wapecc">
@@ -13,14 +16,11 @@ export default function Event() {
                                     alt="Logo de wapecc 23" 
                                 />
                             </div>
-                            <p>Events Wapecc23</p>
+                            <p>{t("home.events-title")}</p>
                         </div>
-                        <p>
-                            WAPECC Lome23 is the 3rd of a series of events held in the region, to bring together the key players 
-                            and drive forward the region's energy and infrastructure transformation, ensuring that reliable and affordable energy becomes a reality for all... 
-                        </p>
+                        <p>{t("home.events-description")}</p>
                         <div className="action-button">
-                            <Link to="#" target='_blanket' className='site'>Go to the website</Link>
+                            <Link to="#" target='_blanket' className='site'>{t("home.events-button")}</Link>
                         </div>
                     </div>
                 </div>

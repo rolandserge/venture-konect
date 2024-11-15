@@ -1,18 +1,21 @@
 import { Link } from 'react-router-dom'
 import BannerModel from '../../components/bannerModel'
+import { useTranslation } from 'react-i18next'
 
 export default function News() {
+
+    const { t } = useTranslation()
 
     return (
         <div className='news-page'>
             <BannerModel
-                title='Media > News'
+                title={'Media > ' + t("media.news.title")}
                 subtitle='Stay updated with the latest news and insights from our industry, covering key developments and trends shaping the future.'
             />
 
             <div className="news-content-infos">
                 <div className="title-news">
-                    <span>News</span>
+                    <span>{t("media.news.title")}</span>
                 </div>
                 <div className="card-news">
                     <div className="news">

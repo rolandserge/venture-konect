@@ -5,13 +5,16 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/swiper-bundle.css';
 import { partners } from "../data";
+import { useTranslation } from "react-i18next";
 
 export default function Partner() {
+
+    const { t } = useTranslation()
 
     return (
         <div className='partner-container'>
             <div className="title">
-                <p>Our partners</p>
+                <p>{t("home.our-partner")}</p>
             </div>
             <Swiper
                 spaceBetween={25}

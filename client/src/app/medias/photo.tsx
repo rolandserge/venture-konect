@@ -1,17 +1,20 @@
+import { useTranslation } from 'react-i18next'
 import BannerModel from '../../components/bannerModel'
 
 export default function Photo() {
 
+    const { t } = useTranslation()
+
     return (
         <div className='gallery'>
             <BannerModel
-                title='Media > Photo Gallery'
+                title={'Media > ' + t("media.photo.title")}
                 subtitle='Explore our photo gallery to capture moments that showcase our journey, achievements, and memorable events.'
             />
 
             <div className="gallery-content">
                 <div className="title-gallery">
-                    <span>Photo Gallery</span>
+                    <span>{t("media.photo.title")}</span>
                 </div>
                 <div className="card-gallery">
                     <div className="card">

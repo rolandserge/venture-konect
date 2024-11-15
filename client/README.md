@@ -48,3 +48,13 @@ export default tseslint.config({
   },
 })
 ```
+
+## A faire demain sur VK
+
+# Mettre les liens de reseaux sociaux
+### Rendre dynamique la langue (phone and pc) avec image
+# Terminer la traduction de Banner Model des pages restantes
+# Traiter les formulaires (contact and registration)
+# Mettre les vrais partenaires de VK fournit par Mdme Florence 
+# Finaliser la localisation
+### Remplir la page notre equipe (Modal pour afficher la suite des infos de la personne)

@@ -2,7 +2,7 @@ import { HiOutlineEnvelope } from 'react-icons/hi2'
 import Feature from '../components/feature'
 import Mission from '../components/mission'
 import Partner from '../components/partner'
-import RequestForm from '../components/requestForm'
+// import RequestForm from '../components/requestForm'
 import { IoLocationOutline } from "react-icons/io5"
 import { HiOutlinePhone } from 'react-icons/hi'
 import Heros from '../components/heros'
@@ -10,34 +10,41 @@ import Heros from '../components/heros'
 // import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import Event from '../components/event'
-// import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 
 export default function Home() {
 
-    // const { t } = useTranslation()
+    const { t } = useTranslation()
 
     return (
         <div className='home-page'>
             <Heros />
             <div className="texte">
-                <p>Bringing Business Partners Together.</p>
+                <p>{t('home.slogan')}</p>
             </div>
             <Feature />
             <Mission />
             <div className="business-connection">
                 <div className="overlay">
-                    <h2>Connecting Business Partners From Across The Globe</h2>
+                    <h2>{t('home.connecting-business')}</h2>
                 </div>
             </div>
             
             <Event />
 
             <Partner />
+
+            <div className="bringing-business">
+                <div className="overlay">
+                    <h2>{t('home.bringing-business')}</h2>
+                </div>
+            </div>
+
             <div className="localisation">
                 <div className="infos">
                     <div className="card">
                         <div className='head'>
-                            <p>London Office</p>
+                            <p>{t('home.localisation.london-office')}</p>
                             <div className="flag">
                                 <img 
                                     src="/assets/londres.webp" 
@@ -69,7 +76,7 @@ export default function Home() {
                     </div>
                     <div className="card">
                         <div className='head'>
-                            <p>Paris Office</p>
+                            <p>{t('home.localisation.paris-office')}</p>
                             <div className="flag">
                                 <img 
                                     src="/assets/france.png" 
@@ -101,7 +108,7 @@ export default function Home() {
                     </div>
                     <div className="card">
                         <div className="head">
-                            <p>Abidjan Office</p>
+                            <p>{t('home.localisation.abidjan-office')}</p>
                             <div className="flag">
                                 <img 
                                     src="/assets/civ.png" 
@@ -133,7 +140,7 @@ export default function Home() {
                     </div>
                     <div className="card">
                         <div className="head">
-                            <p>Dakar Office</p>
+                            <p>{t('home.localisation.dakar-office')}</p>
                             <div className="flag">
                                 <img 
                                     src="/assets/senegal.png" 
@@ -191,18 +198,13 @@ export default function Home() {
                     </MapContainer> */}
                 </div>
             </div>
-            <div className="bringing-business">
-                <div className="overlay">
-                    <h2>Bringing Business Partners Together.</h2>
-                </div>
-            </div>
             
-            <RequestForm />
+            {/* <RequestForm /> */}
 
             <div className="corporate-social">
                 <div className="text">
-                    <h1>Corporate Social Responsibility</h1>
-                    <p>Through our CSR initiatives, Venture Konect strives to contribute to the sustainable transformation of emerging markets, ensuring that our activities leave a lasting, positive impact on the environment, society, and economy.</p>
+                    <h1>{t('home.corporate-title')}</h1>
+                    <p>{t('home.corporate-content')}</p>
                 </div>
                 <div className="card-image">
                     <img src="/assets/csr.jpg" alt="crs image" />

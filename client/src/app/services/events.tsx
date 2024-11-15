@@ -1,30 +1,27 @@
+import { Trans, useTranslation } from 'react-i18next'
 import BannerModel from '../../components/bannerModel'
 import Event from '../../components/event'
 
 export default function Events() {
+    
+    const { t } = useTranslation()
 
     return (
         <div className='services-option-page'>
             <BannerModel
-                title='Services > Events'
+                title={'Services > ' + t("about-us.service.event-title")}
                 subtitle='We believe that impactful discussions and collaboration are essential for addressing'
             />
 
             <div className="content">
                 <div className="part-1">
-                    <span>Venture Konect's Events</span>
-                    <p>
-                        We believe that impactful discussions and collaboration are essential for addressing the challenges in emerging markets. 
-                        Venture Konect organizes targeted industry dialogues, particularly focused on the energy, mining, and industrial sectors.<br /><br /> 
-                        Our events bring together global investors and credible sector stakeholders to discuss trends, share insights, and forge partnerships.<br />
-                        These events provide a platform for fostering innovation and sustainable development in key industries across the globe.
-                    </p>
+                    <span>{t("about-us.service.event-title")}</span>
+                    <p><Trans i18nKey="services.events.content" /></p>
                 </div>
             </div>
-                <div className="wapecc-illustration">
-                   
+            <div className="wapecc-illustration"> 
                   <Event />
-                </div>
+            </div>
         </div>
     )
 }

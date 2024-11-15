@@ -36,6 +36,12 @@
                     grid-template-columns: 1fr;
                     gap: 1.3em;
                 }
+
+                .error-input {
+                    display: flex;
+                    flex-direction: column;
+                    gap: .5em;
+                }
             }
 
             input {

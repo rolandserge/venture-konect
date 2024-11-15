@@ -1,24 +1,22 @@
+import { Trans, useTranslation } from 'react-i18next'
 import BannerModel from '../../components/bannerModel'
 
 export default function Consultancy() {
 
+    const { t } = useTranslation()
+
     return (
         <div className='services-option-page'>
             <BannerModel 
-                title='Service > Consultancy Service'
+                title={"Service > " + t("about-us.service.consultancy-title")}
                 subtitle='At Venture Konect, we specialize in identifying and creating sustainable investment opportunities.'
             />
 
             <div className="content">
                 {/* <Service /> */}
                 <div className="part-1">
-                    <span>Consultancy service</span>
-                    <p>
-                        At Venture Konect, we specialize in identifying and creating sustainable investment opportunities. <br />
-                        We source high-potential local projects from key institutions in emerging markets and connect them with our global network of 
-                        investors and technology providers. <br /> <br /> By leveraging our expertise, we facilitate viable solutions that meet the needs of both local 
-                        stakeholders and international partners, ensuring a mutually beneficial outcome for all parties involved.
-                    </p>
+                    <span>{t("about-us.service.consultancy-title")}</span>
+                    <p><Trans i18nKey="services.consultancy.content" /></p>
                 </div>
                 <div className="illustration">
                     <img 

@@ -7,11 +7,13 @@ import 'swiper/css/effect-fade'
 // import required modules
 import { Autoplay, Navigation, Mousewheel } from 'swiper/modules';
 import { Link } from 'react-router-dom';
-import ScrollLink from './scrollLink';
+import { useTranslation } from 'react-i18next';
 // import { Link } from 'react-scroll';
 
 
 export default function Heros() {
+
+    const { t } = useTranslation()
 
     return (
         <div className="heros">
@@ -39,14 +41,10 @@ export default function Heros() {
                         alt="banner fond"
                     />
                     <div className="overlay">
-                        <h1>Infrastructure Enabling Everyone</h1>
-                        <p>For productivity growth, Human Development and to reduce levels of poverty</p>
+                        <h1>{t("home.heros.slide-title-1")}</h1>
+                        <p>{t("home.heros.slide-content-1")}</p>
                         <div className="button-action">
-                            <ScrollLink
-                                title='Initate a project with us'
-                                lien='request-form'
-                            />
-                            <Link to="#" className="lien">About Us</Link>
+                            <Link to="/initate-project-forms" className='lien'>{t("home.heros.button")}</Link>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -56,13 +54,10 @@ export default function Heros() {
                         alt="banner fond"
                     />
                     <div className="overlay">
-                        <h1>Project Sourcing Key People , Business insights</h1>
-                        <p>Connecting you and your business , Helping you take your Company to new heights</p>
+                        <h1>{t("home.heros.slide-title-2")}</h1>
+                        <p>{t("home.heros.slide-content-2")}</p>
                         <div className="button-action">
-                            <ScrollLink
-                                title='Initate a project with us'
-                                lien='request-form'
-                            />
+                            <Link to="/initate-project-forms" className='lien'>{t("home.heros.button")}</Link>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -72,13 +67,10 @@ export default function Heros() {
                         alt="banner fond"
                     />
                     <div className="overlay">
-                        <h1>Power For Everyone</h1>
-                        <p>Most emerging markets have many untapped resources for power generation with huge potential</p>
+                        <h1>{t("home.heros.slide-title-3")}</h1>
+                        <p>{t("home.heros.slide-content-3")}</p>
                         <div className="button-action">
-                            <ScrollLink
-                                title='Initate a project with us'
-                                lien='request-form'
-                            />
+                            <Link to="/initate-project-forms" className='lien'>{t("home.heros.button")}</Link>
                         </div>
                     </div>
                 </SwiperSlide>

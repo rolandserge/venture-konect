@@ -28,8 +28,15 @@ export default function NavBar() {
     const [index, setIndex] = useState(0)
     const navigate = useNavigate()
 
-    const { t } = useTranslation()
+    const { t, i18n: { changeLanguage, language } } = useTranslation()
+    const [currentLanguage, setCurrentLanguage] = useState(language)
 
+    const handleChangeLanguage = () => {
+        setActive(false)
+        const newLanguage = currentLanguage === "en" ? "fr" : "en";
+        setCurrentLanguage(newLanguage);
+        changeLanguage(newLanguage);
+    }
     const navItems = t("layout.navbar.items", { returnObjects: true})
 
     return (
@@ -92,10 +99,10 @@ export default function NavBar() {
                                 {t("layout.navbar.contact")}
                             </Link>
                         </li>
-                        <li className='language'>
+                        <li className='language' onClick={handleChangeLanguage}>
                             <img 
-                                src='/assets/france.png' 
-                                alt='Language of website' 
+                                src={currentLanguage === "en" ? '/assets/france.png' : "/assets/londres.webp"}
+                                alt={currentLanguage === "en" ? "Website in English" : "Le site web en francais"}
                             />
                         </li>
                     </ul>
@@ -117,7 +124,7 @@ export default function NavBar() {
                                     </Link>
                                 </li>
                                 {Object.values(navItems).map((items: NavbarProps, count: number) => (
-                                    <li>
+                                    <li key={count}>
                                         <span 
                                             className={location.pathname.includes(items.key) ? "active": "test"}
                                             onClick={() => { setOpen(!open); setIndex(count)}}
@@ -151,8 +158,11 @@ export default function NavBar() {
                                         {t("layout.navbar.contact")}
                                     </Link>
                                 </li>
-                                <li className="image-li" onClick={() => setActive(false)}>
-                                    <img src="/assets/france.png" alt="Langue image" />
+                                <li className="image-li" onClick={handleChangeLanguage}>
+                                    <img 
+                                        src={currentLanguage === "en" ? '/assets/france.png' : "/assets/londres.webp"}
+                                        alt={currentLanguage === "en" ? "Website in English" : "Le site web en francais"}
+                                    />
                                 </li>
                             </ul>
                         </div>

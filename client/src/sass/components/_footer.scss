@@ -1,5 +1,5 @@
 footer {
-    background: $blue-foncer;
+    background: black;
     
     .footer {
         
@@ -25,13 +25,42 @@ footer {
             .footer-element {
 
                 .image {
-                    width: 70%;
+                    width: 85%;
                     height: 15vh;
         
                     img {
                         width: 100%;
                         height: 100%;
                         object-fit: contain;
+                    }
+                }
+                .slogan {
+                    text-align: center;
+                    color: white;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    margin-top: 2.5em;
+                }
+                .link {
+                    display: flex;
+                    flex-direction: column;
+                    gap: .8em;
+                    margin-top: 3em;
+
+                    .icon {
+                        color: $blue-bg;
+                    }
+
+                    .lien {
+                        text-decoration: none;
+                        display: flex;
+                        gap: .3em;
+                        color: white;
+                        align-items: center;
+
+                        &:hover {
+                            color: $blue-bg;
+                        }
                     }
                 }
                 .reseaux {
@@ -41,22 +70,23 @@ footer {
         
                     .icon {
                         @include flex-center;
-                        width: 45px;
-                        height: 45px;
+                        width: 40px;
+                        height: 40px;
                         border-radius: 50%;
                         color: white;
+                        background: rgba($color: #DCDCDC, $alpha: .1);
                     }
                     .icon:hover:first-child {
-                        color: $blue-bg;
+                        background: $blue-bg;
                     }
                     .icon:hover:nth-child(2) {
-                        color: blue;
+                        background: blue;
                     }
                     .icon:hover:nth-child(3) {
-                        color: black;
+                        background: black;
                     }
                     .icon:hover:last-child {
-                        color: red;
+                        background: red;
                     }
                     
                 }
@@ -65,12 +95,6 @@ footer {
                     color: white;
                     display: flex;
                     flex-direction: column;
-
-                    &::after {
-                        content: "";
-                        background: #f1f1f1;
-                        height: .1vh;
-                    }
                 }
                 .element {
                     margin-top: 3em;
@@ -89,47 +113,20 @@ footer {
                             @include flex-center;
                             color: $blue-bg
                         }
-        
-                        .lien {
-                            color: $gris;
-
-                            &:hover {
-                                color: white;
-                            }
-                        }
                         p {
-                            color: #f1f1F1;
+                            color: gray;
                         }
                     }
                 }
         
                 ul {
-                    list-style: none;
-        
-                    .footer-nav {
-                        text-decoration: none;
-                        color: $gris;
-                    }
-        
-                    li {
-                        padding: .5em 0;
-                    }
-                    .langue {
-                        height: 8vh;
-                        width: 18%;
-                        cursor: pointer;
-        
-                        img {
-                            width: 100%;
-                            height: 100%;
-                        }
-                    }
+                    list-style: none;    
                 }
             }
         }
 
         .en-bas {
-            background: $blue-bg;
+            background: $blue-foncer;
             color: white;
             text-align: center;
             padding: .6em;

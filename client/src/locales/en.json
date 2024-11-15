@@ -58,6 +58,15 @@
         } 
     },
     "home": {
+        "slogan": "Venture Konect : Connect, facilitate, succeed",
+        "connecting-business": "Connecting Business Partners From Across The Globe",
+        "bringing-business": "Bringing Business Partners Together.",
+        "corporate-title": "Corporate Social Responsibility",
+        "our-partner": "Our partners",
+        "events-title": "Events Wapecc23",
+        "events-button": "Go to the website",
+        "events-description": "WAPECC Lome23 is the 3rd of a series of events held in the region, to bring together the key players and drive forward the region's energy and infrastructure transformation, ensuring that reliable and affordable energy becomes a reality for all...",
+        "corporate-content": "Through our CSR initiatives, Venture Konect strives to contribute to the sustainable transformation of emerging markets, ensuring that our activities leave a lasting, positive impact on the environment, society, and economy.",
         "about-us": {
             "title": "About Us",
             "content": "We are a company with an emerging market-focused team of professionals specialising in  promoting and facilitating socio-economic development,  with particular focus on supporting private sector engagement towards local institutions. <br /><br /> At Venture Konect, we believe that our experience, skills and passion can impact socio-economic de velopment across the globe. Our aim is to develop a strong partnership with both locales institutions and the global stakeholders. This is achieved through an uncompromising  commitment to the highest standards of <strong>Professionalism</strong>, <strong>Integrity </strong> & <strong>Confidentiality.</strong>"
@@ -67,49 +76,158 @@
             "abidjan-office": "Abidjan Office",
             "dakar-office": "Dakar Office",
             "paris-office": "Paris Office"
+        },
+        "heros": {
+            "slide-title-1": "Infrastructure Enabling Everyone",
+            "slide-content-1": "For productivity growth, Human Development and to reduce levels of poverty",
+            "slide-title-2": "Project Sourcing Key People , Business insights",
+            "slide-content-2": "Connecting you and your business , Helping you take your Company to new heights",
+            "slide-title-3": "Power For Everyone",
+            "slide-content-3": "Most emerging markets have many untapped resources for power generation with huge potential",
+            "button": "Initate a project with us"
+        },
+        "features": [
+            {
+                "image": "/assets/local-project.jpg",
+                "title": "To find out about local projects",
+                "description": "find top priority local projects needing investment and fulfil partner’s needs for funding and technology",
+                "button": "Open your project with us",
+                "redirect": "/initate-project-forms"
+            },
+            {
+                "image": "/assets/connect-people.jpeg",
+                "title": "To connect with key people",
+                "description": "connect one to one with the right people and get the information that really matters to your business",
+                "button": "Let us connect you",
+                "redirect": "/services/consultancy-service"
+            },
+            {
+                "image": "/assets/business-insight.webp",
+                "title": "To get the best business insight",
+                "description": "get the best industry insight from relevant experts at our meetings",
+                "button": "At our regional meeting",
+                "redirect": "/services/venture-konect's-events"
+            }
+        ]
+    },
+    "about-us": {
+        "subtitle-about": "At Venture Konect, our motto ''Connect, Facilitate, Succeed'' embodies our mission : to connect the right partners to create strategic synergies, to facilitate complex processes by offering practical solutions and tailored advice, and ultimately, to succeed by ensuring tangible and sustainable results for our clients and partners. Our goal is to foster collaboration and guarantee the success of projects in emerging markets",
+        "mission": {
+            "title": "Our Mission",
+            "content-1": "At Venture Konect, our mission is to facilitate sustainable and viable investment opportunities by bridging the gap between emerging markets and global investors. Through our consultancy services, we source high-potential local projects from key institutions and connect them with international investors and technology providers seeking opportunities across the globe.",
+            "content-2": "We also empower corporate executives by organizing strategic business excursions to critical markets, enabling them to meet and engage with key business partners and unlock new ventures",
+            "content-3": "In addition, our tailored events focus on addressing challenges in the energy, mining, and industrial sectors of emerging markets. By fostering targeted dialogues, we create a platform where global investors can build relationships with credible stakeholders and contribute to meaningful sector development",
+            "content-4": "At Venture Konect, we are dedicated to driving growth by fostering connections, innovation, and impactful partnerships in the world's most dynamic industries."
+        },
+        "vision": {
+            "title": "Our Vision",
+            "content": "Our vision at Venture Konect is to be the leading global bridge between emerging market opportunities and international investors, fostering sustainable development and innovation in key industries such as energy, mining, and industrial sectors. <br /><br /> We strive to create lasting partnerships that drive economic growth, empower local communities, and address global challenges by connecting the right projects with the right investors and technology providers. <br /><br />Through our commitment to excellence, we aim to shape the future of zemerging markets, making them engines of global progress and prosperity."
+        },
+        "service": {
+            "title": "Our Services",
+            "event-title": "Venture Konect's Events",
+            "event-content": "We believe that impactful discussions and collaboration are essential for addressing the challenges in emerging...",
+            "consultancy-title": "Consultancy service",
+            "consultancy-content": "At Venture Konect, we specialize in identifying and creating sustainable investment opportunities...",
+            "corporate-title": "Corporate Executive Prospection",
+            "corporate-content": "We organise tailored business excursions for corporate executives to strategic markets, enabling...",
+            "button": "Explore more"
+        },
+        "our-teams": {
+            "subtitle": "Our teams are dedicated to delivering innovative solutions, combining expertise and collaboration to achieve excellence in every project.",
+            "title": "Our Teams",
+            "content": "We are a company with an emerging market-focused team of professionals specialising in  promoting and facilitating socio-economic development, with particular focus on supporting private sector engagement towards local institutions.<br />At Venture Konect, we believe that our experience, skills and passion can impact the future of Africa.",
+            "button": "Read more",
+            "teams1": {
+                "fonction": "Inconnu",
+                "poste-court": "With over 15 years of experience in business development, Florence is an accomplished professional renowned for driving",
+                "poste-long": "Inconnu"
+            },
+            "teams2": {
+                "fonction": "Deputy Director",
+                "poste-court": "With over 15 years of experience in business development, Florence is an accomplished professional renowned for driving",
+                "poste-long": "With over 15 years of experience in business development, Florence is an accomplished professional renowned for driving investment initiatives and fostering strategic partnerships in emerging markets across the globe. Throughout her career, she has developed a deep understanding of global market dynamics and has consistently delivered results in diverse industries, including energy, infrastructure, and technology.<br /><br />Florence has successfully navigated the complexities of emerging economies, identifying high-potential opportunities and creating tailored investment solutions that bridge the gap between international investors and local businesses. She has built a reputation for securing key partnerships, raising capital, and driving the growth of projects that promote sustainable development and economic growth in underdeveloped regions.<br /><br />Her expertise spans across market analysis, investment strategy, cross-cultural negotiations, and business expansion, with a particular focus on building long-term relationships that lead to mutual success. As a forward-thinking leader, Florence has consistently delivered innovative strategies that not only meet the financial goals of investors but also contribute to the socio-economic development of the markets in which she operates.<br /><br />Florence is deeply committed to the promotion of private sector engagement in emerging markets and continues to play a pivotal role in facilitating international investment into regions with untapped potential."
+            }
         }
+    },
+    "services": {
+        "events": {
+            "subtitle": "",
+            "content": "We believe that impactful discussions and collaboration are essential for addressing the challenges in emerging markets. Venture Konect organizes targeted industry dialogues, particularly focused on the energy, mining, and industrial sectors.<br /><br /> Our events bring together global investors and credible sector stakeholders to discuss trends, share insights, and forge partnerships.<br />These events provide a platform for fostering innovation and sustainable development in key industries across the globe."
+        },
+        "consultancy": {
+            "subtitle": "",
+            "content": "At Venture Konect, we specialize in identifying and creating sustainable investment opportunities. <br />We source high-potential local projects from key institutions in emerging markets and connect them with our global network of investors and technology providers. <br /> <br /> By leveraging our expertise, we facilitate viable solutions that meet the needs of both local stakeholders and international partners, ensuring a mutually beneficial outcome for all parties involved."
+        },
+        "corporate": {
+            "subtitle": "",
+            "content": "We organise tailored business excursions for corporate executives to strategic markets, enabling them to meet with key business partners and explore new opportunities. <br /><br />Venture Konect carefully prepares the groundwork for these excursions, ensuring that our clients connect with the right stakeholders in countries critical to their industries. <br />These missions foster meaningful relationships that drive business growth and open doors to new ventures."
+        }
+    },
+    "media": {
+        "news": {
+            "subtitle": "",
+            "title": "News"
+        },
+        "photo": {
+            "subtitle": "",
+            "title": "Photo Gallery"
+        },
+        "video": {
+            "subtitle": "",
+            "title": "Video Gallery"
+        }
+    },
+    "contact": {
+        "subtitle": "",
+        "detail-contact": "Contact details",
+        "contact-title": "Your contact",
+        "formulaires": {
+            "name": "Enter your name",
+            "email": "Enter your email",
+            "phone": "Enter your phone number",
+            "company": "Enter your company name",
+            "job": "Enter your job description",
+            "title": "Enter your job title",
+            "industry": "Enter your industry",
+            "city": "Enter your city",
+            "message": "Enter your message",
+            "button": "Submit",
+            "corporate": "Corporate",
+            "interest": {
+                "title": "What is your interest ?",
+                "choose": "Choose your interest",
+                "consultancy": "Conseil",
+                "corporate": "Corporate Executive Prospection",
+                "event": "Evenement"
+            },
+            "about-us": {
+                "title": "Where did you hear about us ?",
+                "choose": "Choose your answer",
+                "internet": "Via internet",
+                "referral": "Referrals",
+                "attended": "Attended event",
+                "other": "Other"
+            }
+        }
+    },
+    "register": {
+        "subtitle": "",
+        "register": "Registration form",
+        "phone": "Phone",
+        "address": "Address",
+        "content": "Would you like to speak to one of our advisers over the phone ? Just submit your details and we’ll be in touch shortly. You can also email us if you would prefer."
     },
     "footer": {
         "social": "Social Network",
         "touch": "Get in Touch",
-        "links": [
-            {
-                "id": "tweet",
-                "title": "Latest Tweets",
-                "content": [
-                    {
-                        "lien": "#",
-                        "texte": "Under the patronage of the Ministry of Petroleum and Energy Senegal..."
-                    },
-                    {
-                        "lien": "#",
-                        "texte": "Under the patronage of the Ministry of Petroleum of Senegal..."
-                    },
-                    {
-                        "lien": "#",
-                        "texte": "Under the patronage of the Ministry of Petroleum of Senegal..."
-                    }
-                ]
-            },
-            {
-                "id": "news",
-                "title": "Recent News",
-                "content": [
-                    {
-                        "lien": "#",
-                        "texte": "Under the patronage of the Ministry of Petroleum of Senegal..."
-                    },
-                    {
-                        "lien": "#",
-                        "texte": "Under the patronage of the Ministry of Petroleum of Senegal..."
-                    },
-                    {
-                        "lien": "#",
-                        "texte": "Under the patronage of the Ministry of Petroleum of Senegal..."
-                    }
-                ]
-            }
-        ],
+        "link": "Useful links",
         "bas-footer": "Copyright © 2024 Venture Konect All Rights Reserved"
+    },
+    "error": {
+        "title": "Error 404",
+        "subtitle": "Sorry Page Was Not Found",
+        "info": "We can't seem to find the page you're looking for.",
+        "button": "Go back home"
     }
 }

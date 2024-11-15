@@ -174,12 +174,13 @@
                             }
                         }
                         .image-li {
-                            width: 20%;
-                            height: 50px;
+                            width: 40px;
+                            height: 40px;
                             cursor: pointer;
 
                             img {
                                 width: 100%;
+                                object-fit: cover;
                                 height: 100%;
                             }
                         }
@@ -229,7 +230,7 @@
                 flex-wrap: wrap;
                 position: relative;
                 gap: .5em;
-                width: 50%;
+                width: 55%;
                 justify-content: space-between;
                 align-items: center;
 
@@ -267,11 +268,13 @@
                 }
         
                 .language {
-                    width: 3%;
+                    width: 5%;
+                    @include flex-center;
                 }
         
                 img {
                     width: 100%;
+                    object-fit: cover;
                     cursor: pointer;
                 }
 

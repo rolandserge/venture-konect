@@ -11,6 +11,7 @@ import News from "./app/medias/news"
 import Photo from "./app/medias/photo"
 import Video from "./app/medias/video"
 import Error from "./app/error"
+import Forms from "./app/forms"
 
 function App() {
 
@@ -58,6 +59,10 @@ function App() {
         {
           path: "/media/video-gallery",
           element: <Video />
+        },
+        {
+          path: "/initate-project-forms",
+          element: <Forms />
         },
         {
           path: "/*",

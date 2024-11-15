@@ -50,8 +50,8 @@
 
                 h1 {
                     font-size: 3em;
-                    width: 60%;
-                    color: $jaune;
+                    width: 65%;
+                    color: white;
 
                     @include responsive(tab-land) {
                         width: 80%;

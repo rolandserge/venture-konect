@@ -1,6 +1,9 @@
+import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
 export default function Service() {
+
+    const { t } = useTranslation()
 
     return (
         <div className="cards-services">
@@ -12,11 +15,11 @@ export default function Service() {
                     />
                 </div>
                 <div className="title">
-                    <span>Consultancy service</span>
+                    <span>{t("about-us.service.consultancy-title")}</span>
                 </div>
-                <p>At Venture Konect, we help create sustainable and viable investments solutions, via sourcing for local projects from key local institutions...</p>
+                <p>{t("about-us.service.consultancy-content")}</p>
                 <div className="action">
-                    <Link to="/services/consultancy-service" className='register'>Explore more</Link>
+                    <Link to="/services/consultancy-service" className='register'>{t("about-us.service.button")}</Link>
                 </div>
             </div>
             <div className="card">
@@ -27,11 +30,11 @@ export default function Service() {
                     />
                 </div>
                 <div className="title">
-                    <span>Venture Konect's Events</span>
+                    <span>{t("about-us.service.event-title")}</span>
                 </div>
-                <p>VK believes that there is no better way to accompany our partners than providing key industry talks with perspective to tackle...</p>
+                <p>{t("about-us.service.event-content")}</p>
                 <div className="action">
-                    <Link to="/services/venture-konect's-events" className='register'>Explore more</Link>
+                    <Link to="/services/venture-konect's-events" className='register'>{t("about-us.service.button")}</Link>
                 </div>
             </div>
             <div className="card">
@@ -42,11 +45,11 @@ export default function Service() {
                     />
                 </div>
                 <div className="title">
-                    <span>Corporate Executive Prospection</span>
+                    <span>{t("about-us.service.corporate-title")}</span>
                 </div>
-                <p>We prepare grounds and  organise business excursions to countries that matters to our audience to meet their key business partners.</p>
+                <p>{t("about-us.service.corporate-content")}</p>
                 <div className="action">
-                    <Link to="/services/corporate-excecute-prospection" className='register'>Explore more</Link>
+                    <Link to="/services/corporate-excecute-prospection" className='register'>{t("about-us.service.button")}</Link>
                 </div>
             </div>
         </div>

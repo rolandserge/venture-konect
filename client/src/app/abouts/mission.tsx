@@ -1,47 +1,35 @@
+import { Trans, useTranslation } from 'react-i18next'
 import BannerModel from '../../components/bannerModel'
 import Service from '../../components/services'
 
 export default function Mission() {
 
+    const { t } = useTranslation()
+
     return (
         <div className='about-us-page'>
             <BannerModel 
-                title='About Us > Mission / Vision'
-                subtitle='Information about venture konect'
+                title={t("home.about-us.title") + ' > Mission / Vision'}
+                subtitle={t("about-us.subtitle-about")}
             />
             
             <div className="about-us-content">
                 <div className="card-part-1">
                     <div className="part">
-                        <span>Our Mission</span>
+                        <span>{t('about-us.mission.title')}</span>
 
                         <div className="mission-card">
                             <div className="card">
-                                <p>
-                                    At Venture Konect, our mission is to facilitate sustainable and viable investment opportunities by bridging the gap 
-                                    between emerging markets and global investors. Through our consultancy services, we source high-potential 
-                                    local projects from key institutions and connect them with international investors and technology providers 
-                                    seeking opportunities across the globe.
-                                </p>
+                                <p>{t('about-us.mission.content-1')}</p>
                             </div>
                             <div className="card">
-                                <p>
-                                    We also empower corporate executives by organizing strategic business excursions to critical markets, 
-                                    enabling them to meet and engage with key business partners and unlock new ventures
-                                </p>
+                                <p>{t("about-us.mission.content-2")}</p>
                             </div>
                             <div className="card">
-                                <p>
-                                    In addition, our tailored events focus on addressing challenges in the energy, mining, and industrial sectors of emerging markets. 
-                                    By fostering targeted dialogues, we create a platform where global investors can build relationships with credible 
-                                    stakeholders and contribute to meaningful sector development
-                                </p>
+                                <p>{t("about-us.mission.content-3")}</p>
                             </div>
                             <div className="card">
-                                <p>
-                                    At Venture Konect, we are dedicated to driving growth by fostering connections, innovation, and impactful 
-                                    partnerships in the world's most dynamic industries.
-                                </p>
+                                <p>{t("about-us.mission.content-4")}</p>
                             </div>
                         </div>
                     </div>
@@ -50,17 +38,11 @@ export default function Mission() {
                     </div>
                 </div>
                 <div className="visions-section">
-                    <span>Our Vision</span>
-                    <p className='vision'>
-                        Our vision at Venture Konect is to be the leading global bridge between emerging market opportunities and international investors, 
-                        fostering sustainable development and innovation in key industries such as energy, mining, and industrial sectors. <br /><br /> We strive to create 
-                        lasting partnerships that drive economic growth, empower local communities, and address global challenges by connecting the right 
-                        projects with the right investors and technology providers. <br /><br />Through our commitment to excellence, we aim to shape the future of 
-                        emerging markets, making them engines of global progress and prosperity.
-                    </p>
+                    <span>{t("about-us.vision.title")}</span>
+                    <p className='vision'><Trans i18nKey="about-us.vision.content" /></p>
                 </div>
                 <div className="services">
-                    <p className='title-service'>Our Services</p>
+                    <p className='title-service'>{t("about-us.service.title")}</p>
                     <Service />
                 </div>
             </div>  
