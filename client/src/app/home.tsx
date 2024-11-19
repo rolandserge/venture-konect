@@ -2,13 +2,9 @@ import { HiOutlineEnvelope } from 'react-icons/hi2'
 import Feature from '../components/feature'
 import Mission from '../components/mission'
 import Partner from '../components/partner'
-// import RequestForm from '../components/requestForm'
 import { IoLocationOutline } from "react-icons/io5"
 import { HiOutlinePhone } from 'react-icons/hi'
 import Heros from '../components/heros'
-
-// import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css';
 import Event from '../components/event'
 import { useTranslation } from 'react-i18next'
 
@@ -173,33 +169,18 @@ export default function Home() {
                 </div>
                 <div className="map-container">
                     <iframe 
-                        height="100%" width="100%" 
+                        height="100%" width="100%"
                         loading="lazy"
                         allowFullScreen
+                        aria-hidden="false"
+                        tabIndex={0}
                         style={{ border: 0 }}
                         referrerPolicy='no-referrer-when-downgrade'
-                        src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=abidjan&amp;t=p&amp;z=11&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                        src="https://www.google.com/maps/d/embed?mid=1h5SkPcCTYsJCjnHJfy8acDnSnjrMUQY&ehbc=2E312F&noprof=1" 
                     >
                     </iframe>
-                    {/* <MapContainer 
-                        center={[51.505, -0.09]} 
-                        zoom={13} style={{ height: '100%', width: '100%' }}
-                        scrollWheelZoom={false}
-                    >
-                        <TileLayer
-                            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                        />
-                        <Marker position={[51.505, -0.09]}>
-                            <Popup>
-                            A pretty CSS3 popup. <br /> Easily customizable.
-                            </Popup>
-                        </Marker>
-                    </MapContainer> */}
                 </div>
             </div>
-            
-            {/* <RequestForm /> */}
 
             <div className="corporate-social">
                 <div className="text">

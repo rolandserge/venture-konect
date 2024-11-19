@@ -4,11 +4,15 @@ import { useForm } from "react-hook-form";
 import { IoLocationOutline } from "react-icons/io5";
 import { LuPhone } from "react-icons/lu";
 import { useTranslation } from 'react-i18next';
+import { UseAxios } from '../context/axiosContext';
+import { Loader } from '@mantine/core';
+import { useState } from 'react';
+import { toast } from 'react-toastify';
 
 interface FormDataProps {
     name: string,
-    jobTile: string;
-    compagny: string;
+    jobTitle: string;
+    company: string;
     email: string,
     phone: number,
     interest: string,
@@ -16,10 +20,34 @@ interface FormDataProps {
 
 export default function RequestForm() {
 
-    const { register, formState: { errors }, control, handleSubmit } = useForm<FormDataProps>();
+    const { register, formState: { errors }, reset, control, handleSubmit } = useForm<FormDataProps>();
+    const [loading, setLoading] = useState(false);
+    const axios = UseAxios()
     const { t } = useTranslation()
 
-    const onSubmit = (data: FormDataProps) => console.log(data);
+    const onSubmit = async(data: FormDataProps) => {
+
+        setLoading(true);
+
+        try {
+            const res = await axios.post("/project", data)
+            
+            if(res.status == 200) {
+                reset()
+                toast.success(<p>Success. We'll be in touch. Thank you for your confidence <br />See you soon</p>);
+            } else if(res.status == 400) {
+                toast.error(res.data.message);
+            }
+        } catch (error: any ) {
+            if(error.status == 400) {
+                toast.error(error.response.data.message)
+            }
+            console.log(error)
+            setLoading(false)
+        } finally {
+            setLoading(false);
+        }
+    }
 
     return (
         <div className='request-form' id='request-form'>
@@ -58,7 +86,7 @@ export default function RequestForm() {
                         </div>
                     </div>
                 </div>
-                <form onSubmit={handleSubmit(onSubmit)}>
+                <form onSubmit={handleSubmit(onSubmit)} id='form'>
                     <input 
                         type="text" 
                         placeholder={t("contact.formulaires.name")}
@@ -69,17 +97,17 @@ export default function RequestForm() {
                     <input 
                         type="text" 
                         placeholder={t("contact.formulaires.title")}
-                        {...register("jobTile", { required: true, minLength: 3 })}
+                        {...register("jobTitle", { required: true, minLength: 3 })}
                     />
-                    {errors.jobTile?.type === "required" && <span style={{ color: "red"}}>This field is required</span>}
-                    {errors.jobTile?.type === "minLength" && <span style={{ color: "red"}}>This field at least 3 characters</span>}
+                    {errors.jobTitle?.type === "required" && <span style={{ color: "red"}}>This field is required</span>}
+                    {errors.jobTitle?.type === "minLength" && <span style={{ color: "red"}}>This field at least 3 characters</span>}
                     <input 
                         type="text" 
                         placeholder={t("contact.formulaires.company")}
-                        {...register("compagny", { required: true, minLength: 5 })}
+                        {...register("company", { required: true, minLength: 5 })}
                     />
-                    {errors.compagny?.type === "required" && <span style={{ color: "red"}}>This field is required</span>}
-                    {errors.compagny?.type === "minLength" && <span style={{ color: "red"}}>This field at least 5 characters</span>}
+                    {errors.company?.type === "required" && <span style={{ color: "red"}}>This field is required</span>}
+                    {errors.company?.type === "minLength" && <span style={{ color: "red"}}>This field at least 5 characters</span>}
                     <input 
                         type="email"
                         placeholder={t("contact.formulaires.email")}
@@ -123,15 +151,9 @@ export default function RequestForm() {
                             <label htmlFor="interest2">{t("contact.formulaires.corporate")}</label>
                         </div>
                     </div>
-                    {/* <div className='flex-check'>
-                        <input 
-                            type="checkbox" 
-                            id="check" 
-                            {...register("confirm", { required: true })}
-                        />
-                        <label htmlFor='check'>I agree with storage and handling of my data by this website.</label>
-                    </div> */}
-                    <button>{t("contact.formulaires.button")}</button>
+                    <button>
+                        { loading ? <Loader size="sm" color="white" /> : t("contact.formulaires.button")}
+                    </button>
                 </form>
             </div>
         </div>

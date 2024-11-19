@@ -16,8 +16,8 @@ datasource db {
 model Contact {
   id        Int      @id @default(autoincrement())
   name      String
-  email     String   @unique
-  phone     BigInt
+  email     String
+  phone     String
   company   String
   job       String
   industry  String
@@ -34,8 +34,8 @@ model Project {
   name      String
   jobTitle  String
   company   String
-  email     String @unique
-  phone     Int
+  email     String
+  phone     String
   interest  String
   createdAt DateTime @default(now())
 }

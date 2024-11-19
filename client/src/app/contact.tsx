@@ -4,7 +4,10 @@ import { useForm } from "react-hook-form";
 import { HiOutlineEnvelope, HiOutlinePhone } from "react-icons/hi2";
 import { IoLocationOutline } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
-// import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import { UseAxios } from "../context/axiosContext";
+import { useState } from "react";
+import { toast } from "react-toastify";
+import { Loader } from "@mantine/core";
 
 type ContactFormsProps = {
     name: string,
@@ -21,17 +24,35 @@ type ContactFormsProps = {
 
 export default function Contact() {
 
-    const { register, formState: { errors }, control, handleSubmit } = useForm<ContactFormsProps>();
+    const [loading, setLoading] = useState(false);
+    const axios = UseAxios()
+
+    const { register, formState: { errors }, reset, control, handleSubmit } = useForm<ContactFormsProps>();
     const { t } = useTranslation()
 
-    const onSubmit = (data: ContactFormsProps) => {
-
-        console.log(data);
+    const onSubmit = async(data: ContactFormsProps) => {
+        
+        setLoading(true);
 
         try {
-           console.log("test") 
-        } catch (error) {
+            const res = await axios.post("/contact", data)
+            
+            if(res.status == 200) {
+                reset()
+                toast.success(<p>Success. We'll be in touch. Thank you for your confidence <br />See you soon</p>);
+            } else if(res.status == 210) {
+                toast.error(res.data.meta.target);
+                console.log(res)
+            } else {
+                console.log(res)
+            }
+        } catch (error: any) {
+            if(error.status == 400) {
+                toast.error(error.response.data.message)
+            }
             console.log(error)
+        } finally {
+            setLoading(false);
         }
     } 
 
@@ -145,7 +166,7 @@ export default function Contact() {
                         ></textarea>
                     </div>
                     <div className="action">
-                        <button>{t("contact.formulaires.button")}</button>
+                        <button>{ loading ? <Loader size="sm" color="white" /> : t("contact.formulaires.button")}</button>
                     </div>
                 </form>
                 <div className="contact-detail">
@@ -192,30 +213,13 @@ export default function Contact() {
                 </div>
             </div>
             <div className="map-container">
-                {/* <MapContainer
-                    center={[51.505, -0.09]} 
-                    zoom={13} 
-                    style={{ height: '100%', width: '100%' }}
-                    scrollWheelZoom={false}
-                >
-                    <TileLayer
-                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                        // attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                    />
-                    <Marker position={[51.505, -0.09]}>
-                        <Popup>
-                        A pretty CSS3 popup. <br /> Easily customizable.
-                        </Popup>
-                    </Marker>
-                </MapContainer> */}
                 <iframe 
                     height="100%" width="100%" 
-                    loading="lazy"
+                    loading="lazy" 
                     allowFullScreen
                     style={{ border: 0 }}
                     referrerPolicy='no-referrer-when-downgrade'
-                    src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;coord=52.70967533219885,-8.020019531250002&amp;q=abidjan&amp;t=p&amp;z=11&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-                >
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=128%20Cannon%20Workshops%2C%20Cannon%20Drive%2C%20London%20E14%204AS&zoom=10&maptype=roadmap">
                 </iframe>
             </div>
         </div>

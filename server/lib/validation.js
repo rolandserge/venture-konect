@@ -1,6 +1,6 @@
 import Joi from "joi";
 
-export function validateContact(body) {
+export function validateProject(body) {
     const schema = Joi.object({
         name: Joi.string().min(3).required(),
         jobTitle: Joi.string().min(3).max(24).required(),
@@ -13,7 +13,7 @@ export function validateContact(body) {
     return schema.validate(body);
 }
 
-export function validateProject(body) {
+export function validateContact(body) {
     const schema = Joi.object({
         name: Joi.string().min(3).required(),
         company: Joi.string().min(3).max(24).required(),
@@ -23,8 +23,8 @@ export function validateProject(body) {
         phone: Joi.number().integer().required(),
         city: Joi.string().max(20).required(),
         about: Joi.string().required(),
-        interest: Joi.string().max(20).required(),
-        message: Joi.string().optional(),
+        interest: Joi.string().max(50).required(),
+        message: Joi.optional(),
     });
 
     return schema.validate(body);

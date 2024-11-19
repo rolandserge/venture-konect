@@ -13,8 +13,7 @@ export default function Forms() {
                 subtitle='Register your interest for Venture Konect'
             />
             <div className="forms-interest-container">
-                <RequestForm
-                />
+                <RequestForm />
             </div>
         </div>
     )
